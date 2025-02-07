@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "https://a375-37-110-210-112.ngrok-free.app",
+      "secure": false,
+      "changeOrigin": true
+    }
+  }
+  

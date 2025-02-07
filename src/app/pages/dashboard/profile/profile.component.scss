@@ -1,0 +1,96 @@
+.profile-section {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    .stats-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+  
+      h2 {
+        margin: 0;
+        color: #2c3e50;
+      }
+  
+      .status-badge {
+        background: #27ae60;
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 1rem;
+      }
+    }
+  
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+  
+      .stat-item {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+        .stat-label {
+          display: block;
+          color: #7f8c8d;
+          font-size: 0.9rem;
+          margin-bottom: 0.5rem;
+        }
+  
+        .stat-value {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #2c3e50;
+        }
+      }
+    }
+  
+    .calendar-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+      .calendar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+  
+        h3 {
+          margin: 0;
+          color: #2c3e50;
+        }
+      }
+  
+      .calendar-table {
+        width: 100%;
+        border-collapse: collapse;
+  
+        th, td {
+          text-align: center;
+          padding: 0.8rem;
+          border: 1px solid #ecf0f1;
+        }
+  
+        th {
+          background: #3498db;
+          color: white;
+          font-weight: 500;
+        }
+  
+        td {
+          color: #2c3e50;
+          
+          &.empty {
+            background: #f9f9f9;
+          }
+        }
+      }
+    }
+  }

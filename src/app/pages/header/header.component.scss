@@ -1,0 +1,81 @@
+header {
+    border-bottom: 0.1px solid rgb(223, 207, 207);
+  }
+  
+  .container {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  
+  .brand-text {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .left-side a,
+  .right-side a {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .course{
+    text-decoration: none;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 20px;
+  }
+  
+  .right-side a {
+    color: #cba35c;
+  }
+  
+  .phone-number {
+    text-decoration: none;
+    color: #cba35c;
+    border: 1px solid #cba35c;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+  }
+  
+  .left-side,
+  .right-side {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+      justify-content: space-between;
+    }
+  
+    .left-side,
+    .right-side {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+  
+
+    .left-side a:not(.brand-text),
+    .right-side a:not(.phone-number) {
+      display: none;
+    }
+  
+    .brand-text {
+      font-size: 24px;
+    }
+  
+    .phone-number {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }

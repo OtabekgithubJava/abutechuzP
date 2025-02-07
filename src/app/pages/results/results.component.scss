@@ -1,0 +1,110 @@
+.statistics {
+    width: 70%;
+    margin: 40px auto;
+    text-align: center;
+  
+    h2 {
+      font-size: 25px;
+      font-weight: 400;
+      color: #333;
+    }
+  
+    p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+  
+    .cards {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+  
+      .card {
+        background-color: #f3f9fe;
+        border-radius: 12px;
+        padding: 20px;
+        flex: 1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+  
+        h3 {
+          font-size: 28px;
+          color: #2c2c2c;
+          margin-bottom: 10px;
+        }
+  
+        img {
+          width: 140px;
+          height: auto;
+          margin-top: 15px;
+          margin-left: -20px;
+          margin-bottom: -25px;
+        }
+
+        .salary {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          
+          .plar, .spanlar {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          
+          .plar p, .spanlar span {
+            margin-bottom: 10px;
+          }       
+          
+          .spanlar span{
+            margin-top: 10px;
+          }
+
+          .spanlar span {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 100;
+            color: #333;
+            margin-bottom: 8px;
+          }          
+
+        }
+    }
+  
+    @media (max-width: 768px) {
+        .statistics {
+            width: 80%;
+            margin: 20px auto;
+        }
+    
+        .cards {
+            flex-direction: column;
+            width: 338px;
+            margin-left: -35px;
+        }
+    
+        .card {
+            margin-bottom: 20px;
+        }
+    
+        h2, p {
+            text-align: left;
+        }
+    
+        h2 {
+            font-size: 22px;
+        }
+    
+        p {
+            font-size: 14px;
+        }
+
+        .just{
+            margin-left: -35px;
+        }
+    }    
+}

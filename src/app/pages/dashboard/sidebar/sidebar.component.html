@@ -1,0 +1,21 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+<nav class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-mark">
+        <img src="images/logo.svg" alt="ABU-TECH">
+      </div>
+    </div>
+  
+    <ul class="nav-menu">
+      <li *ngFor="let item of menuItems" 
+          [routerLink]="item.link" 
+          routerLinkActive="active"
+          [matTooltip]="item.title">
+        <a>
+          <i [class]="item.icon + ' fa-fw'"></i>
+          <span>{{ item.title }}</span>
+        </a>
+      </li>
+    </ul>
+  </nav>

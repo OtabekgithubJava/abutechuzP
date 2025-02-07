@@ -1,0 +1,26 @@
+<div class="dashboard-container">
+    <app-sidebar class="sidebar"></app-sidebar>
+    
+    <div class="main-content">
+      <div class="top-nav">
+        <div class="header-content">
+          <div class="branding">
+            <h1>ABU-TECH ERP</h1>
+          </div>
+          <div class="user-menu">
+            <button mat-icon-button>
+              <mat-icon>notifications</mat-icon>
+            </button>
+            <div class="user-profile">
+              <span>John Doe</span>
+              <mat-icon>account_circle</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="content-area">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>

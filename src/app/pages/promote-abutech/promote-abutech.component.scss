@@ -1,0 +1,120 @@
+.welcome-section {
+  display: flex;
+  border-radius: 20px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  padding: 0.6rem;
+  background-color: #faebd9;
+  box-shadow: 0 0 5px #CBA35C;
+  margin-top: 10%;
+}
+
+.welcome-text {
+  max-width: 50%;
+}
+
+.welcome-text img {
+  width: 65vh;
+  height: 53vh;
+  margin-top: 4%;
+  border-radius: 20px;
+}
+
+.consultation-form {
+  margin-top: 2%;
+  max-width: 35%;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 6px #CBA35C;
+}
+
+.consultation-form h2 {
+  font-size: 1.8rem;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.consultation-form p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.consultation-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.consultation-form input,
+.consultation-form button {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.consultation-form button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.consultation-form button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .welcome-section {
+    flex-direction: column;
+    width: 82%;
+    padding: 1rem;
+    margin-top: 20%;
+  }
+
+  .welcome-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .welcome-text img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 10px;
+  }
+
+  .consultation-form {
+    max-width: 100%;
+    margin-top: 2rem;
+    padding: 1rem; 
+  }
+
+  .consultation-form input,
+  .consultation-form button {
+    font-size: 1.1rem; 
+  }
+
+  .consultation-form label {
+    font-size: 0.9rem; 
+  }
+
+  .consultation-form p {
+    font-size: 1rem; 
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section {
+    margin-top: 15%; 
+  }
+
+  .consultation-form {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+}

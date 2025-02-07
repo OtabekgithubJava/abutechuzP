@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+<div class="submit-homework-container">
+    <div class="homework-card">
+      <h2 class="title">Submit Homework <span class="homework-id">(#{{ homeworkId }})</span></h2>
+      
+      <div class="form-group">
+        <label for="textSubmission" class="label">📝 Text Submission:</label>
+        <textarea id="textSubmission" [(ngModel)]="submittedText" rows="6" placeholder="Write your answer here..."></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="fileSubmission" class="label">
+          <i class="fas fa-paperclip"></i> File Submission:
+        </label>
+        <input id="fileSubmission" type="file" (change)="onFileSelected($event)" multiple />
+      </div>
+  
+      <button class="submit-button" (click)="submitHomework()">
+        <i class="fas fa-upload"></i> Submit Homework
+      </button>
+    </div>
+  </div>
+  

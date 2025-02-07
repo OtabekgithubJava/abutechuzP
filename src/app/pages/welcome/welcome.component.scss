@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Raleway:wght@400;600&display=swap');
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  background-color: #faebd9;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #CBA35C;
+  margin: 1rem auto;
+  width: 85%;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 5%;
+
+  .welcome-text {
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    h1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.8rem;  /* Mobile size */
+      color: #8c6c3e;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .consultation-form {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 6px #CBA35C;
+
+    h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.5rem;
+      color: #000;
+      text-align: center;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      input {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      label {
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      button {
+        padding: 0.9rem;
+        font-size: 1rem;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #218838;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .welcome-section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 65%;
+  }
+
+  .welcome-text {
+    max-width: 50%;
+    text-align: left;
+
+    h1 {
+      margin-top: 10%; 
+      font-size: 2.2rem;  
+    }
+
+    p {
+      font-size: 1rem; 
+      margin-top: 20%; 
+    }
+  }
+
+  .consultation-form {
+    max-width: 40%;
+  }
+}
