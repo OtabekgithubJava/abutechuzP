@@ -1,0 +1,92 @@
+.payment-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    h1 {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+    }
+  
+    .summary-cards {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+  
+      .summary-card {
+        flex: 1;
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+  
+        .label {
+          font-size: 1rem;
+          color: #7f8c8d;
+          margin-bottom: 0.5rem;
+        }
+  
+        .amount {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-left: 10px;
+          color: #2c3e50;
+        }
+  
+        &.total-paid {
+          border-left: 4px solid #27ae60;
+        }
+  
+        &.pending {
+          border-left: 4px solid #e74c3c;
+        }
+      }
+    }
+  
+    .payment-table {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+      table {
+        width: 100%;
+        border-collapse: collapse;
+  
+        th, td {
+          padding: 1rem;
+          text-align: left;
+          border-bottom: 1px solid #ecf0f1;
+        }
+  
+        th {
+          background: #3498db;
+          color: white;
+          font-weight: 500;
+        }
+  
+        td {
+          color: #2c3e50;
+        }
+  
+        .status-badge {
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          font-size: 0.9rem;
+          font-weight: 500;
+  
+          &.paid {
+            background: #27ae60;
+            color: white;
+          }
+  
+          &.unpaid {
+            background: #e74c3c;
+            color: white;
+          }
+        }
+      }
+    }
+  }

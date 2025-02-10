@@ -1,1 +1,25 @@
-<p>exams works!</p>
+<div class="exam-container">
+    <h1>Exam Schedule</h1>
+  
+    <!-- Exam Table -->
+    <div class="exam-table">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Course</th>
+            <th>Type</th>
+            <th>Total Marks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let exam of exams">
+            <td>{{ exam.id }}</td>
+            <td>{{ exam.course.name }}</td>
+            <td>{{ exam.type }}</td>
+            <td>{{ exam.totalMarks }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

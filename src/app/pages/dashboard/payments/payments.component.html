@@ -1,1 +1,41 @@
-<p>payments works!</p>
+<div class="payment-container">
+    <h1>Payment History</h1>
+  
+    <div class="summary-cards">
+      <div class="summary-card total-paid">
+        <span class="label">Total Paid</span>
+        <span class="amount">${{ totalPaid }}</span>
+      </div>
+      <div class="summary-card pending">
+        <span class="label">Pending Payments</span>
+        <span class="amount">${{ totalPending }}</span>
+      </div>
+    </div>
+  
+    <div class="payment-table">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Payment Month</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let payment of payments">
+            <td>{{ payment.id }}</td>
+            <td>{{ payment.date | date: 'mediumDate' }}</td>
+            <td>${{ payment.amount }}</td>
+            <td>{{ payment.paymentMonth }}</td>
+            <td>
+              <span class="status-badge" [ngClass]="{'paid': payment.status, 'unpaid': !payment.status}">
+                {{ payment.status ? 'Paid' : 'Unpaid' }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

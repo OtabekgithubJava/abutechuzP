@@ -28,6 +28,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { HomeworkSubmitComponent } from './pages/dashboard/homework-submit/homework-submit.component';
 import { FormsModule } from '@angular/forms';
+import { VideoLessonsComponent } from './pages/dashboard/video-lessons/video-lessons.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { FormsModule } from '@angular/forms';
     ExamsComponent,
     NotificationsComponent,
     SettingsComponent,
-    HomeworkSubmitComponent
+    HomeworkSubmitComponent,
+    VideoLessonsComponent
   ],
   imports: [
     BrowserModule,

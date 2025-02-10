@@ -1,14 +1,13 @@
 <div class="homework-container">
-    <h1>Available Homework</h1>
-    <div *ngFor="let homework of homeworks" class="homework-card">
-      <div class="card-header">
-        <h3>{{ homework.title }}</h3>
-        <span class="homework-id">#{{ homework.id }}</span>
-      </div>
-      <p class="homework-description">{{ homework.description }}</p>
-      <button class="submit-button" [routerLink]="['/dashboard/homework', homework.id]">
-        View and Submit
-      </button>
+  <h1 class="page-title">Available Homework</h1>
+  <div *ngFor="let homework of homeworks" class="homework-card">
+    <div class="card-header">
+      <h3 class="homework-title">{{ homework.title }}</h3>
+      <span class="homework-id">Assignment #{{ homework.id }}</span>
     </div>
+    <p class="homework-description">{{ homework.description }}</p>
+    <button class="submit-button" [routerLink]="['/dashboard/homework', homework.id]">
+      <i class="fas fa-edit"></i> View & Submit
+    </button>
   </div>
-  
+</div>

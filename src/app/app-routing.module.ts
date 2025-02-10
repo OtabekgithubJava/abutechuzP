@@ -11,6 +11,7 @@ import { ExamsComponent } from './pages/dashboard/exams/exams.component';
 import { NotificationsComponent } from './pages/dashboard/notifications/notifications.component';
 import { SettingsComponent } from './pages/dashboard/settings/settings.component';
 import { HomeworkSubmitComponent } from './pages/dashboard/homework-submit/homework-submit.component';
+import { VideoLessonsComponent } from './pages/dashboard/video-lessons/video-lessons.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,7 @@ const routes: Routes = [
       { path: 'exams', component: ExamsComponent },
       { path: 'notifications', component: NotificationsComponent },
       { path: 'settings', component: SettingsComponent },
+      { path: 'videos', component: VideoLessonsComponent},
       { path: '', redirectTo: 'profile', pathMatch: 'full' }
     ]
   },

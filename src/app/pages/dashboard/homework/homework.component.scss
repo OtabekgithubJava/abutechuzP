@@ -1,65 +1,76 @@
 .homework-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 10px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 40px;
     text-align: center;
   }
-  
-  h1 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
+
   .homework-card {
-    background: #f9f9f9;
+    background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 16px 0;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     }
-  }
-  
-  .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  
-    h3 {
-      font-size: 1.5rem;
-      color: #007bff;
-      margin: 0;
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+
+      .homework-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #34495e;
+      }
+
+      .homework-id {
+        font-size: 1rem;
+        color: #7f8c8d;
+        font-weight: 500;
+      }
     }
-  
-    .homework-id {
-      font-size: 0.9rem;
-      color: #777;
+
+    .homework-description {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .submit-button {
+      background-color: #3498db;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      i {
+        margin-right: 8px;
+      }
+
+      &:hover {
+        background-color: #2980b9;
+        transform: translateY(-2px);
+      }
     }
   }
-  
-  .homework-description {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 15px;
-  }
-  
-  .submit-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  
-    &:hover {
-      background-color: #0056b3;
-    }
-  }
+}

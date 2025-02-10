@@ -12,6 +12,7 @@ export class SidebarComponent {
     { title: 'Exams', icon: 'fas fa-pencil-alt', link: '/dashboard/exams' },
     { title: 'Payments', icon: 'fas fa-credit-card', link: '/dashboard/payments' },
     { title: 'Notifications', icon: 'fas fa-bell', link: '/dashboard/notifications' },
-    { title: 'Settings', icon: 'fas fa-cog', link: '/dashboard/settings' }
+    { title: 'Settings', icon: 'fas fa-cog', link: '/dashboard/settings' },
+    { title: 'Videos', icon: 'fas fa-video', link: '/dashboard/videos' }
   ];
 }

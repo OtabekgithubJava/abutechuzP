@@ -1,0 +1,39 @@
+.exam-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    h1 {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+    }
+  
+    .exam-table {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+      table {
+        width: 100%;
+        border-collapse: collapse;
+  
+        th, td {
+          padding: 1rem;
+          text-align: left;
+          border-bottom: 1px solid #ecf0f1;
+        }
+  
+        th {
+          background: #3498db;
+          color: white;
+          font-weight: 500;
+        }
+  
+        td {
+          color: #2c3e50;
+        }
+      }
+    }
+  }
