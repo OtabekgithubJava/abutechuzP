@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
+  isSidebarOpen = false;
+  
   menuItems = [
     { title: 'Profile', icon: 'fas fa-user', link: '/dashboard/profile' },
     { title: 'Homework', icon: 'fas fa-book', link: '/dashboard/homework' },
@@ -15,4 +17,13 @@ export class SidebarComponent {
     { title: 'Settings', icon: 'fas fa-cog', link: '/dashboard/settings' },
     { title: 'Videos', icon: 'fas fa-video', link: '/dashboard/videos' }
   ];
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
+
+  closeSidebar() {
+    this.isSidebarOpen = false;
+  }
+
 }

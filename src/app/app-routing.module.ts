@@ -12,8 +12,29 @@ import { NotificationsComponent } from './pages/dashboard/notifications/notifica
 import { SettingsComponent } from './pages/dashboard/settings/settings.component';
 import { HomeworkSubmitComponent } from './pages/dashboard/homework-submit/homework-submit.component';
 import { VideoLessonsComponent } from './pages/dashboard/video-lessons/video-lessons.component';
+import { LoginComponent } from './pages/login/login.component';
+import { AuthService } from './services/auth.service';
+import { Injectable } from '@angular/core';
+import { CanActivate, Router } from '@angular/router';
+
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class AuthGuard implements CanActivate {
+//   constructor(private authService: AuthService, private router: Router) {}
+
+  // canActivate(): boolean {
+  //   if (!this.authService.isLoggedIn()) {
+  //     this.router.navigate(['/login']);
+  //     return false;
+  //   }
+  //   return true;
+  // }
+// }
 
 const routes: Routes = [
+  { path: 'login', component: LoginComponent, pathMatch: 'full' },
   {
     path: 'dashboard',
     component: DashboardComponent,
@@ -25,11 +46,11 @@ const routes: Routes = [
       { path: 'exams', component: ExamsComponent },
       { path: 'notifications', component: NotificationsComponent },
       { path: 'settings', component: SettingsComponent },
-      { path: 'videos', component: VideoLessonsComponent},
+      { path: 'videos', component: VideoLessonsComponent },
       { path: '', redirectTo: 'profile', pathMatch: 'full' }
     ]
   },
-  {path: '', redirectTo: 'app', pathMatch: 'full'}
+  { path: '', redirectTo: 'app', pathMatch: 'full' }  
 ];
 
 

@@ -7,10 +7,13 @@ import { Router } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'ERP_UI';
   constructor(private router: Router) {}
 
   isDashboardRoute(): boolean {
     return this.router.url.startsWith('/dashboard');
+  }
+
+  isLoginRoute(): boolean {
+    return this.router.url.startsWith('/login');
   }
 }

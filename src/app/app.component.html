@@ -1,16 +1,19 @@
-<ng-container *ngIf="!isDashboardRoute()">
-    <app-header></app-header>
-    <app-welcome></app-welcome>
-    <app-about-abutech></app-about-abutech>
-    <app-examples-carusel></app-examples-carusel>
-    <app-results></app-results>
-    <app-why-study-at-abutech></app-why-study-at-abutech>
-    <app-promote-abutech></app-promote-abutech>
-    <app-location></app-location>
-    <app-footer></app-footer>
-  </ng-container>
-  
-  <ng-container *ngIf="isDashboardRoute()">
-    <router-outlet></router-outlet>
-  </ng-container>
-  
+<ng-container *ngIf="!isDashboardRoute() && !isLoginRoute()">
+  <app-header></app-header>
+  <app-welcome></app-welcome>
+  <app-about-abutech></app-about-abutech>
+  <app-examples-carusel></app-examples-carusel>
+  <app-results></app-results>
+  <app-why-study-at-abutech></app-why-study-at-abutech>
+  <app-promote-abutech></app-promote-abutech>
+  <app-location></app-location>
+  <app-footer></app-footer>
+</ng-container>
+
+<ng-container *ngIf="isDashboardRoute()">
+  <router-outlet></router-outlet>
+</ng-container>
+
+<ng-container *ngIf="isLoginRoute()">
+  <router-outlet></router-outlet>
+</ng-container>

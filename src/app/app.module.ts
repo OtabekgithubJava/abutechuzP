@@ -29,6 +29,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { HomeworkSubmitComponent } from './pages/dashboard/homework-submit/homework-submit.component';
 import { FormsModule } from '@angular/forms';
 import { VideoLessonsComponent } from './pages/dashboard/video-lessons/video-lessons.component';
+import { LoginComponent } from './pages/login/login.component';
+// import { AuthGuard } from './app-routing.module';
+import { AuthService } from './services/auth.service';
+
 
 @NgModule({
   declarations: [
@@ -53,7 +57,8 @@ import { VideoLessonsComponent } from './pages/dashboard/video-lessons/video-les
     NotificationsComponent,
     SettingsComponent,
     HomeworkSubmitComponent,
-    VideoLessonsComponent
+    VideoLessonsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -64,6 +69,8 @@ import { VideoLessonsComponent } from './pages/dashboard/video-lessons/video-les
     FormsModule
   ],
   providers: [
+    AuthService,
+    // AuthGuard,
     provideClientHydration(),
     provideAnimationsAsync()
   ],

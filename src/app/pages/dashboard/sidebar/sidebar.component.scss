@@ -2,7 +2,6 @@
 
 $gold: #CBA35A;
 $dark-gold: darken($gold, 10%);
-$blue: #3f51b5;
 $light-gray: #f9f9f9;
 $active-bg: #CBA35A;
 
@@ -19,31 +18,6 @@ $active-bg: #CBA35A;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
-
-  .sidebar-header {
-    padding: 1rem 0;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #e0e0e0;
-
-    .brand-mark {
-      width: 148px;
-      height: 48px;
-      margin-bottom: 1rem;
-
-      img {
-        width: 90%;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
-
-    .brand-name {
-      font-size: 1.25rem;
-      color: $blue;
-      margin: 0;
-      font-weight: 600;
-    }
-  }
 
   .nav-menu {
     list-style: none;
@@ -68,58 +42,56 @@ $active-bg: #CBA35A;
         transition: all 0.3s ease;
 
         i {
-          background: none;
           font-size: 1.2rem;
           color: $gold;
           padding: 8px;
           transition: all 0.3s ease;
         }
 
-        span {
-          transition: color 0.3s ease;
-        }
-
         &:hover {
           background: rgba($gold, 0.15);
           color: $dark-gold;
-
-          i {
-            color: $dark-gold;
-          }
         }
       }
 
       &.active {
         background: $active-bg;
-        
         a {
           color: white;
-
-          i {
-            color: white;
-          }
-
-          span {
-            font-weight: 600;
-          }
         }
-      }
-
-      &:hover:not(.active) {
-        transform: translateX(4px);
-        background: rgba($gold, 0.1);
       }
     }
   }
 }
 
-// Responsive Design
+/* Mobile Styles */
+.mobile-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: $gold;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 250;
+}
+
+/* Hide sidebar initially on mobile */
 @media (max-width: 768px) {
   .sidebar {
     transform: translateX(-100%);
+    position: fixed;
+  }
 
-    &.mobile-open {
-      transform: translateX(0);
-    }
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .mobile-toggle {
+    display: block;
   }
 }
