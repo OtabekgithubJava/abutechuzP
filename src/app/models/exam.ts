@@ -1,7 +1,9 @@
+import { ExamType } from "../enums/enum";
+import { Course } from "./course";
+
 export interface Exam {
-    id: number;
-    courseId: number;
-    type?: string;
-    totalMarks: number;
-  }
-  
+  id: number;
+  course: Course;
+  type?: ExamType;  
+  totalMarks: number;
+}

@@ -1,0 +1,52 @@
+<div class="admin-dashboard">
+    <aside class="sidebar">
+      <h2>Admin Panel</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Students</a></li>
+          <li><a href="#">Teachers</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Exams</a></li>
+          <li><a href="#">Grades</a></li>
+          <li><a href="#">Payments</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="content">
+      <header class="top-bar">
+        <h1>Dashboard</h1>
+        <div class="user-info">
+          <span>Welcome, Admin</span>
+        </div>
+      </header>
+      <section class="calendar">
+        <div class="calendar-header">
+          <button (click)="previousMonth()">&lt;</button>
+          <h2>{{ currentMonth }} {{ currentYear }}</h2>
+          <button (click)="nextMonth()">&gt;</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Sun</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let week of weeks">
+              <td *ngFor="let day of week" [class.friday]="day?.isFriday">
+                {{ day?.date || '' }} <span *ngIf="day?.isFriday" class="red-star">*</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+</div>

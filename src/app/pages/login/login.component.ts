@@ -8,21 +8,27 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  email: string = '';
-  password: string = '';
+  username = '';
+  password = '';
+  errorMessage = '';
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private router: Router,
+    private authService: AuthService
+  ) {}
 
-  // login() {
-  //   this.authService.login(this.email, this.password).subscribe(
-  //     (response) => {
-  //       localStorage.setItem('token', response.token);  
-  //       localStorage.setItem('userId', response.id);  
-  //       this.router.navigate(['/dashboard']);  
-  //     },
-  //     (error) => {
-  //       alert('Invalid credentials!');
-  //     }
-  //   );
-  // }
+  onLogin() {
+    if (this.username === 'admin@otabek.me' && this.password === 'Otabek-07-$') {
+      localStorage.setItem('isAuthenticated', 'true');
+      this.router.navigate(['/admin/dashboard'], { 
+        replaceUrl: true,
+        queryParamsHandling: 'merge'
+      }).then(() => {
+        window.location.reload();
+      });
+    } else {
+      this.errorMessage = 'Xato parol yoki email!';
+      this.password = '';
+    }
+  }
 }

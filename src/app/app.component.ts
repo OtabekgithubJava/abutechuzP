@@ -9,11 +9,12 @@ import { Router } from '@angular/router';
 export class AppComponent {
   constructor(private router: Router) {}
 
-  isDashboardRoute(): boolean {
-    return this.router.url.startsWith('/dashboard');
-  }
-
   isLoginRoute(): boolean {
     return this.router.url.startsWith('/login');
   }
+
+    isAdminRoute(): boolean {
+      return this.router.url.startsWith('/admin');
+    }
+  
 }

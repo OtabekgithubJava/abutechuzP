@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
+import { Router } from '@angular/router';
 
 interface LoginRequest {
   email: string;
@@ -16,25 +17,19 @@ interface LoginResponse {
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private apiUrl = 'http://localhost:5182/api/user';
-
-  constructor(private http: HttpClient) {}
-
-  login(email: string, password: string): Observable<LoginResponse> {
-    return this.http
-      .post<LoginResponse>(`${this.apiUrl}/login`, { email, password })
-      .pipe(
-        tap((res) => {
-          localStorage.setItem('token', res.token); 
-        })
-      );
+  login(email: string, password: string): boolean {
+    if (email === 'admin@otabek.me' && password === 'Otabek-07-$') {
+      localStorage.setItem('isAuthenticated', 'true');
+      return true;
+    }
+    return false;
   }
 
-  getProfile(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/profile`);
+  isLoggedIn(): boolean {
+    return localStorage.getItem('isAuthenticated') === 'true';
   }
 
   logout(): void {
-    localStorage.removeItem('token');
+    localStorage.removeItem('isAuthenticated');
   }
 }

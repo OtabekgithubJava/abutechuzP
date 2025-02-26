@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { AboutAbutechComponent } from './pages/about-abutech/about-abutech.component';
-import { ProfileComponent } from './pages/dashboard/profile/profile.component';
-import { PaymentsComponent } from './pages/dashboard/payments/payments.component';
-import { HomeworkComponent } from './pages/dashboard/homework/homework.component';
-import { ResultsComponent } from './pages/results/results.component';
-import { ExamsComponent } from './pages/dashboard/exams/exams.component';
-import { NotificationsComponent } from './pages/dashboard/notifications/notifications.component';
-import { SettingsComponent } from './pages/dashboard/settings/settings.component';
-import { HomeworkSubmitComponent } from './pages/dashboard/homework-submit/homework-submit.component';
-import { VideoLessonsComponent } from './pages/dashboard/video-lessons/video-lessons.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthService } from './services/auth.service';
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
-
+import { AdminLoginComponent } from './pages/admin/admin-login/admin-login.component';
+import { AuthGuardService } from './services/auth.guard.service';
+import { AppComponent } from './app.component';
+import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-dashboard.component';
+import { TeachersComponent } from './pages/admin/teachers/teachers.component';
+import { CoursesComponent } from './pages/courses/courses.component';
+import { EnrollmentsComponent } from './pages/admin/enrollments/enrollments.component';
+import { ExamsComponent } from './pages/admin/exams/exams.component';
+import { GradesComponent } from './pages/admin/grades/grades.component';
+import { PaymentsComponent } from './pages/admin/payments/payments.component';
+import { ParentsComponent } from './pages/admin/parents/parents.component';
+import { VideosComponent } from './pages/admin/videos/videos.component';
+import { StudentsComponent } from './pages/admin/students/students.component';
 
 // @Injectable({
 //   providedIn: 'root'
@@ -24,33 +26,47 @@ import { CanActivate, Router } from '@angular/router';
 // export class AuthGuard implements CanActivate {
 //   constructor(private authService: AuthService, private router: Router) {}
 
-  // canActivate(): boolean {
-  //   if (!this.authService.isLoggedIn()) {
-  //     this.router.navigate(['/login']);
-  //     return false;
-  //   }
-  //   return true;
-  // }
+//   canActivate(): boolean {
+//     if (!this.authService.isLoggedIn()) {
+//       this.router.navigate(['/login']);
+//       return false;
+//     }
+//     return true;
+//   }
 // }
 
+
 const routes: Routes = [
-  { path: 'login', component: LoginComponent, pathMatch: 'full' },
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
+  { path: 'app', component: AppComponent },
+  { path: 'login', component: LoginComponent },
+  
+  { 
+    path: 'admin',
     children: [
-      { path: 'profile', component: ProfileComponent },
-      { path: 'payments', component: PaymentsComponent },
-      { path: 'homework', component: HomeworkComponent },
-      { path: 'homework/:id', component: HomeworkSubmitComponent },
-      { path: 'exams', component: ExamsComponent },
-      { path: 'notifications', component: NotificationsComponent },
-      { path: 'settings', component: SettingsComponent },
-      { path: 'videos', component: VideoLessonsComponent },
-      { path: '', redirectTo: 'profile', pathMatch: 'full' }
+      { path: 'login', component: AdminLoginComponent },
+      { 
+        path: 'dashboard',
+        component: AdminDashboardComponent,
+        canActivate: [AuthGuardService],
+        children: [
+          { path: 'students', component: StudentsComponent },
+          { path: 'teachers', component: TeachersComponent },
+          { path: 'courses', component: CoursesComponent },
+          { path: 'enrollments', component: EnrollmentsComponent },
+          { path: 'exams', component: ExamsComponent },
+          { path: 'grades', component: GradesComponent },
+          { path: 'payments', component: PaymentsComponent },
+          { path: 'parents', component: ParentsComponent },
+          { path: 'videos', component: VideosComponent },
+          { path: '', redirectTo: 'students', pathMatch: 'full' }
+        ]
+      },
+      { path: '', redirectTo: 'login', pathMatch: 'full' }
     ]
   },
-  { path: '', redirectTo: 'app', pathMatch: 'full' }  
+
+  { path: '', redirectTo: 'app', pathMatch: 'full' },
+  { path: '**', redirectTo: 'app' }
 ];
 
 

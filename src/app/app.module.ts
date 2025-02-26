@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './pages/header/header.component';
@@ -14,24 +20,36 @@ import { CoursesComponent } from './pages/courses/courses.component';
 import { LocationComponent } from './pages/location/location.component';
 import { ExamplesCaruselComponent } from './pages/examples-carusel/examples-carusel.component';
 import { FooterComponent } from './pages/footer/footer.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { SidebarComponent } from './pages/dashboard/sidebar/sidebar.component';
-import { ProfileComponent } from './pages/dashboard/profile/profile.component';
-import { PaymentsComponent } from './pages/dashboard/payments/payments.component';
-import { HomeworkComponent } from './pages/dashboard/homework/homework.component';
-import { ExamsComponent } from './pages/dashboard/exams/exams.component';
-import { NotificationsComponent } from './pages/dashboard/notifications/notifications.component';
-import { SettingsComponent } from './pages/dashboard/settings/settings.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { HomeworkSubmitComponent } from './pages/dashboard/homework-submit/homework-submit.component';
 import { FormsModule } from '@angular/forms';
-import { VideoLessonsComponent } from './pages/dashboard/video-lessons/video-lessons.component';
 import { LoginComponent } from './pages/login/login.component';
 // import { AuthGuard } from './app-routing.module';
 import { AuthService } from './services/auth.service';
+import { AdminLoginComponent } from './pages/admin/admin-login/admin-login.component';
+import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-dashboard.component';
+import { AdminSidebarComponent } from './pages/admin/admin-dashboard/admin-sidebar/admin-sidebar.component';
+import { AdminNavbarComponent } from './pages/admin/admin-dashboard/admin-navbar/admin-navbar.component';
+import { AdminHomeComponent } from './pages/admin/admin-dashboard/admin-home/admin-home.component';
+import { StudentsComponent } from './pages/admin/students/students.component';
+import { StudentFormComponent } from './pages/admin/students/student-form/student-form.component';
+import { TeachersComponent } from './pages/admin/teachers/teachers.component';
+import { TeacherFormComponent } from './pages/admin/teachers/teacher-form/teacher-form.component';
+import { CourseFormComponent } from './pages/admin/courses/course-form/course-form.component';
+import { EnrollmentsComponent } from './pages/admin/enrollments/enrollments.component';
+import { EnrollmentFormComponent } from './pages/admin/enrollments/enrollment-form/enrollment-form.component';
+import { ExamsComponent } from './pages/admin/exams/exams.component';
+import { ExamFormComponent } from './pages/admin/exams/exam-form/exam-form.component';
+import { GradesComponent } from './pages/admin/grades/grades.component';
+import { GradeFormComponent } from './pages/admin/grades/grade-form/grade-form.component';
+import { PaymentsComponent } from './pages/admin/payments/payments.component';
+import { PaymentFormComponent } from './pages/admin/payments/payment-form/payment-form.component';
+import { ParentsComponent } from './pages/admin/parents/parents.component';
+import { ParentFormComponent } from './pages/admin/parents/parent-form/parent-form.component';
+import { VideosComponent } from './pages/admin/videos/videos.component';
+import { VideoFormComponent } from './pages/admin/videos/video-form/video-form.component';
 
 
 @NgModule({
@@ -48,29 +66,45 @@ import { AuthService } from './services/auth.service';
     LocationComponent,
     ExamplesCaruselComponent,
     FooterComponent,
-    DashboardComponent,
-    SidebarComponent,
-    ProfileComponent,
-    PaymentsComponent,
-    HomeworkComponent,
+    LoginComponent,
+    AdminLoginComponent,
+    AdminDashboardComponent,
+    AdminSidebarComponent,
+    AdminNavbarComponent,
+    AdminHomeComponent,
+    StudentsComponent,
+    StudentFormComponent,
+    TeachersComponent,
+    TeacherFormComponent,
+    CourseFormComponent,
+    EnrollmentsComponent,
+    EnrollmentFormComponent,
     ExamsComponent,
-    NotificationsComponent,
-    SettingsComponent,
-    HomeworkSubmitComponent,
-    VideoLessonsComponent,
-    LoginComponent
+    ExamFormComponent,
+    GradesComponent,
+    GradeFormComponent,
+    PaymentsComponent,
+    PaymentFormComponent,
+    ParentsComponent,
+    ParentFormComponent,
+    VideosComponent,
+    VideoFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatTooltipModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
     MatIconModule,
     MatButtonModule,
-    MatTooltipModule,
-    FormsModule
+    MatSidenavModule,
+    MatListModule,
   ],
   providers: [
     AuthService,
-    // AuthGuard,
     provideClientHydration(),
     provideAnimationsAsync()
   ],

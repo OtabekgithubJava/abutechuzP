@@ -1,0 +1,105 @@
+/* admin-login.component.scss */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+    
+    .logo {
+      height: 60px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: #2d3748;
+      margin: 0;
+    }
+    
+    .subtitle {
+      color: #718096;
+      margin: 0.5rem 0 0;
+      font-size: 0.9rem;
+    }
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  
+    mat-form-field {
+      width: 100%;
+      
+      mat-icon {
+        color: #a0aec0;
+      }
+    }
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .forgot-password {
+      color: #667eea;
+      text-decoration: none;
+      font-size: 0.9rem;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .login-button {
+    padding: 12px 24px;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    
+    mat-icon {
+      margin-left: 8px;
+      font-size: 18px;
+    }
+    
+    &:hover {
+      transform: translateY(-1px);
+    }
+  }
+  
+  .error-message {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #e53e3e;
+    background: #fff5f5;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    
+    mat-icon {
+      font-size: 18px;
+    }
+  }
