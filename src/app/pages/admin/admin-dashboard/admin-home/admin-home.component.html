@@ -1,1 +1,9 @@
-<p>admin-home works!</p>
+<div class="admin-dashboard flex">
+    <app-admin-sidebar></app-admin-sidebar>
+
+    <main class="content flex-1 p-6 bg-gray-100">
+        <app-admin-navbar></app-admin-navbar>
+
+        <router-outlet></router-outlet>
+    </main>
+</div>

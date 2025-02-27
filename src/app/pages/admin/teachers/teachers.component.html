@@ -1,1 +1,27 @@
-<p>teachers works!</p>
+<p>teacher works</p>
+
+<div class="container">
+  <h2>Teachers List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let teacher of teachers">
+        <td>{{ teacher.id }}</td>
+        <td>{{ teacher.name }}</td>
+        <td>{{ teacher.email }}</td>
+        <td>{{ teacher.phone }}</td>
+        <td>
+          <button class="delete-btn" (click)="deleteTeacher(teacher.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
