@@ -1,7 +1,11 @@
-<p>teacher works</p>
-
+<!-- teachers.component.html -->
 <div class="container">
   <h2>Teachers List</h2>
+
+  <div class="button-container">
+    <button class="create-btn" (click)="openForm('create')">➕ Create</button>
+  </div>
+
   <table>
     <thead>
       <tr>
@@ -9,19 +13,51 @@
         <th>Name</th>
         <th>Email</th>
         <th>Phone</th>
-        <th>Actions</th>
+        <th>Courses</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let teacher of teachers">
+      <tr *ngFor="let teacher of teachers; trackBy: trackByTeacher">
         <td>{{ teacher.id }}</td>
         <td>{{ teacher.name }}</td>
         <td>{{ teacher.email }}</td>
         <td>{{ teacher.phone }}</td>
+        <td>{{ teacher.courses.join(', ') }}</td>
         <td>
-          <button class="delete-btn" (click)="deleteTeacher(teacher.id)">Delete</button>
+          <div>
+            <button class="update-btn" (click)="openForm('update', teacher)" title="Edit">✏️</button>
+            <button class="delete-btn" (click)="deleteTeacher(teacher.id)" title="Delete">🗑️</button>
+          </div>
         </td>
       </tr>
     </tbody>
   </table>
+</div>
+
+<!-- Modal -->
+<div *ngIf="isFormOpen" class="modal-overlay">
+  <div class="modal-content">
+    <h3>{{ formMode === 'create' ? 'Create Teacher' : 'Update Teacher' }}</h3>
+    
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="teacherForm.name" name="name" required>
+
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="teacherForm.email" name="email" required>
+
+    <label>Phone:</label>
+    <input type="tel" [(ngModel)]="teacherForm.phone" name="phone" required>
+
+    <label>Courses (comma separated):</label>
+    <input type="text" [(ngModel)]="teacherForm.courses" name="courses" 
+           placeholder="Course1, Course2, Course3">
+
+    <div class="button-group">
+      <button (click)="submitForm()" class="save-btn">
+        {{ formMode === 'create' ? 'Create' : 'Update' }}
+      </button>
+      <button (click)="closeForm()" class="cancel-btn">Cancel</button>
+    </div>
+  </div>
 </div>

@@ -1,1 +1,91 @@
-<p>payments works!</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="container">
+    <h2>Payments List</h2>
+  
+    <div class="button-container">
+        <button class="create-btn" (click)="openForm('create')">➕ Create</button>
+    
+        <div class="filter-group">
+        <div class="filter-item">
+            <input type="number" placeholder="Student ID" [(ngModel)]="filterStudentId">
+            <button class="filter-btn" (click)="filterByStudent()">
+            <i class="fas fa-user-alt"></i>
+            </button>
+        </div>
+    
+        <div class="filter-item">
+            <input type="month" [(ngModel)]="filterMonth">
+            <button class="filter-btn" (click)="filterByMonth()">
+            <i class="fas fa-calendar-alt"></i> 
+            </button>
+        </div>
+    
+        <button class="clear-btn" (click)="clearFilters()">
+            <i class="fas fa-times-circle"></i> 
+        </button>
+        </div>
+    </div>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Student</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Payment Month</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let payment of payments; trackBy: trackByPayment">
+          <td>{{ payment.id }}</td>
+          <td>{{ payment.studentId}}</td>
+          <td>{{ payment.amount}}</td>
+          <td>{{ payment.date}}</td>
+          <td>{{ payment.status ? 'Paid' : 'Pending' }}</td>
+          <td>{{ payment.paymentMonth || '-' }}</td>
+          <td>
+            <div>
+              <button class="update-btn" (click)="openForm('update', payment)" title="Edit">✏️</button>
+              <button class="delete-btn" (click)="deletePayment(payment.id)" title="Delete">🗑️</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Modal -->
+  <div *ngIf="isFormOpen" class="modal-overlay">
+    <div class="modal-content">
+      <h3>{{ formMode === 'create' ? 'Create Payment' : 'Update Payment' }}</h3>
+      
+      <label>Student ID:</label>
+      <input type="number" [(ngModel)]="paymentForm.studentId" required>
+  
+      <label>Amount:</label>
+      <input type="number" [(ngModel)]="paymentForm.amount" step="0.01" required>
+  
+      <label>Payment Date:</label>
+      <input type="text" [(ngModel)]="paymentForm.date" required>
+  
+      <label>Status:</label>
+      <select [(ngModel)]="paymentForm.status">
+        <option [value]="true">Paid</option>
+        <option [value]="false">Pending</option>
+      </select>
+  
+      <label>Payment Month:</label>
+      <input type="month" [(ngModel)]="paymentForm.paymentMonth">
+  
+      <div class="button-group">
+        <button (click)="submitForm()" class="save-btn">
+          {{ formMode === 'create' ? 'Create' : 'Update' }}
+        </button>
+        <button (click)="closeForm()" class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+  </div>

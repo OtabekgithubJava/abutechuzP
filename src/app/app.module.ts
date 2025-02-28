@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -16,7 +16,6 @@ import { ResultsComponent } from './pages/results/results.component';
 import { WhyStudyAtAbutechComponent } from './pages/why-study-at-abutech/why-study-at-abutech.component';
 import { StudentsFeedbackComponent } from './pages/students-feedback/students-feedback.component';
 import { PromoteAbutechComponent } from './pages/promote-abutech/promote-abutech.component';
-import { CoursesComponent } from './pages/courses/courses.component';
 import { LocationComponent } from './pages/location/location.component';
 import { ExamplesCaruselComponent } from './pages/examples-carusel/examples-carusel.component';
 import { FooterComponent } from './pages/footer/footer.component';
@@ -50,6 +49,7 @@ import { ParentsComponent } from './pages/admin/parents/parents.component';
 import { ParentFormComponent } from './pages/admin/parents/parent-form/parent-form.component';
 import { VideosComponent } from './pages/admin/videos/videos.component';
 import { VideoFormComponent } from './pages/admin/videos/video-form/video-form.component';
+import { CoursesComponent } from './pages/admin/courses/courses.component';
 
 
 @NgModule({
@@ -62,7 +62,6 @@ import { VideoFormComponent } from './pages/admin/videos/video-form/video-form.c
     WhyStudyAtAbutechComponent,
     StudentsFeedbackComponent,
     PromoteAbutechComponent,
-    CoursesComponent,
     LocationComponent,
     ExamplesCaruselComponent,
     FooterComponent,
@@ -89,6 +88,7 @@ import { VideoFormComponent } from './pages/admin/videos/video-form/video-form.c
     ParentFormComponent,
     VideosComponent,
     VideoFormComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
@@ -102,6 +102,7 @@ import { VideoFormComponent } from './pages/admin/videos/video-form/video-form.c
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
+    HttpClientModule,
   ],
   providers: [
     AuthService,

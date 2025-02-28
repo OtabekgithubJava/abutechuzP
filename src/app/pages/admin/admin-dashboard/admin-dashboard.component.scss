@@ -1,4 +1,10 @@
 /* Base Styles */
+
+body{
+  background: #ecf0f1;
+
+}
+
 .admin-dashboard {
   display: flex;
   height: 100vh;
@@ -12,7 +18,13 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  position: fixed; 
+  left: 0;         
+  top: 0;          
+  height: 100vh;    
+  overflow-y: auto; 
 }
+
 
 .sidebar h2 {
   margin-bottom: 20px;
@@ -47,11 +59,12 @@
 .content {
   flex-grow: 1;
   padding: 20px;
-  background: #ecf0f1;
+  margin-left: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 
 .top-bar {
   display: flex;
@@ -63,6 +76,12 @@
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.jfj {
+  transition: opacity 0.3s ease;
+  opacity: 1;
 }
 
 /* Mobile styles */
@@ -97,20 +116,26 @@
   }
 
   .content {
-      margin-bottom: 60px; /* Make space for the mobile footer */
+      margin-bottom: 60px;
   }
 
   .mobile-footer {
-      display: none; /* Hide footer in mobile view */
+      display: none; 
   }
 
   .sidebar ul li a span {
       font-size: 0.8rem;
   }
+  
+  .jfj {
+    opacity: 0;
+    pointer-events: none; 
+    position: absolute; 
+  }
 }
 
 /* Footer for mobile */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .mobile-footer {
       display: block;
       position: fixed;
@@ -138,5 +163,11 @@
 
   .mobile-footer a:hover {
       background: #34495e;
+  }
+
+  .jfj {
+    opacity: 0;
+    pointer-events: none; 
+    position: absolute; 
   }
 }

@@ -11,7 +11,7 @@ import { AuthGuardService } from './services/auth.guard.service';
 import { AppComponent } from './app.component';
 import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-dashboard.component';
 import { TeachersComponent } from './pages/admin/teachers/teachers.component';
-import { CoursesComponent } from './pages/courses/courses.component';
+import { CoursesComponent } from './pages/admin/courses/courses.component';
 import { EnrollmentsComponent } from './pages/admin/enrollments/enrollments.component';
 import { ExamsComponent } from './pages/admin/exams/exams.component';
 import { GradesComponent } from './pages/admin/grades/grades.component';

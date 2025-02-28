@@ -2,7 +2,7 @@ import { Student } from "./student";
 
 export interface FeePayment {
   id: number;
-  student: Student;
+  studentId: number;
   amount: number;
   date: Date;
   status: boolean;

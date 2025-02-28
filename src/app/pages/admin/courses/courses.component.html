@@ -1,1 +1,57 @@
-<p>courses works!</p>
+<div class="container">
+    <h2>Courses List</h2>
+  
+    <div class="button-container">
+      <button class="create-btn" (click)="openForm('create')">➕ Create</button>
+    </div>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Code</th>
+          <th>Credits</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let course of courses; trackBy: trackByCourse">
+          <td>{{ course.id }}</td>
+          <td>{{ course.name }}</td>
+          <td>{{ course.code }}</td>
+          <td>{{ course.credits }}</td>
+          <td>{{ course.description }}</td>
+          <td>
+            <div>
+              <button class="update-btn" (click)="openForm('update', course)" title="Edit">✏️</button>
+              <button class="delete-btn" (click)="deleteCourse(course.id)" title="Delete">🗑️</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Modal -->
+  <div *ngIf="isFormOpen" class="modal-overlay">
+    <div class="modal-content">
+      <h3>{{ formMode === 'create' ? 'Create Course' : 'Update Course' }}</h3>
+      <label>Name:</label>
+      <input type="text" [(ngModel)]="courseForm.name" />
+  
+      <label>Description:</label>
+      <input type="text" [(ngModel)]="courseForm.description" />
+
+      <label>Code:</label>
+      <input type="text" [(ngModel)]="courseForm.code" />
+
+      <label>Credits:</label>
+      <input type="number" [(ngModel)]="courseForm.credits" />
+
+  
+      <button (click)="submitForm()" class="save-btn">{{ formMode === 'create' ? 'Create' : 'Update' }}</button>
+      <button (click)="closeForm()" class="cancel-btn">Cancel</button>
+    </div>
+  </div>

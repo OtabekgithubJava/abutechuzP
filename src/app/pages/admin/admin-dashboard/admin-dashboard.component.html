@@ -19,7 +19,7 @@
         <header class="top-bar flex justify-between items-center mb-4">
             <h1 class="text-2xl font-bold">Dashboard</h1>
             <div class="user-info text-gray-700">
-                <span>Welcome, Admin</span>
+                <span class="jfj">Welcome, Admin</span>
             </div>
         </header>
   
@@ -39,17 +39,27 @@
             </div>
         </div>
   
-        <router-outlet></router-outlet>
+        <div class="children">
+            <router-outlet></router-outlet>
+        </div>
     </main>
   </div>
   
   <!-- Mobile Footer -->
-  <footer class="mobile-footer">
-      <ul class="flex justify-between p-3 bg-gray-800 text-white">
-          <li><a href="#" class="flex flex-col items-center text-center"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-          <li><a href="#" class="flex flex-col items-center text-center"><i class="fas fa-user-graduate"></i><span>Students</span></a></li>
-          <li><a href="#" class="flex flex-col items-center text-center"><i class="fas fa-chalkboard-teacher"></i><span>Teachers</span></a></li>
-          <li><a href="#" class="flex flex-col items-center text-center"><i class="fas fa-book"></i><span>Courses</span></a></li>
-      </ul>
+  <footer class="mobile-footer hidden md:hidden fixed bottom-0 left-0 w-full bg-gray-900 text-white shadow-lg">
+    <ul class="flex justify-around p-3">
+        <li><a href="#" class="flex flex-col items-center text-center hover:text-blue-400">
+            <i class="fas fa-tachometer-alt text-lg"></i><span class="text-xs mt-1">Dashboard</span></a>
+        </li>
+        <li><a href="#" class="flex flex-col items-center text-center hover:text-blue-400">
+            <i class="fas fa-user-graduate text-lg"></i><span class="text-xs mt-1">Students</span></a>
+        </li>
+        <li><a href="#" class="flex flex-col items-center text-center hover:text-blue-400">
+            <i class="fas fa-chalkboard-teacher text-lg"></i><span class="text-xs mt-1">Teachers</span></a>
+        </li>
+        <li><a href="#" class="flex flex-col items-center text-center hover:text-blue-400">
+            <i class="fas fa-book text-lg"></i><span class="text-xs mt-1">Courses</span></a>
+        </li>
+    </ul>
   </footer>
   
