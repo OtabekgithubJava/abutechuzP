@@ -1,1 +1,129 @@
-<p>students works!</p>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+<div class="container">
+    <h2>Students List</h2>
+  
+    <div class="button-container">
+        <button class="create-btn" (click)="openForm('create')">
+            ➕ Create
+        </button>
+
+        <div class="filter-group">
+            <div class="filter-item">
+                <input type="text" placeholder="Student Code" [(ngModel)]="filterByCode">
+                <button class="filter-btn" (click)="filterByCode()">
+                    <i class="fas fa-id-card"></i>
+                </button>
+            </div>
+
+            <div class="filter-item">
+                <input type="number" placeholder="Course ID" [(ngModel)]="filterByCourse">
+                <button class="filter-btn" (click)="filterByCourse()">
+                    <i class="fas fa-book-open"></i>
+                </button>
+            </div>
+
+            <button class="clear-btn" (click)="clearFilters()">
+                <i class="fas fa-times-circle"></i>
+            </button>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>DOB</th>
+                <th>Enrollment Date</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students; trackBy: trackByStudent">
+                <td>{{ student.id }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.code }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.phone }}</td>
+                <td>{{ student.dob }}</td>
+                <td>{{ student.enrollmentDate }}</td>
+                <td>
+                    <span class="status-badge" [class]="student.status.toLowerCase()">
+                        {{ student.status }}
+                    </span>
+                </td>
+                <td>
+                    <div class="action-buttons">
+                      <button class="update-btn" (click)="openForm('update', student)" title="Update">✏️</button>
+                      <button class="delete-btn" (click)="deleteStudent(student.id)" title="Delete">🗑️</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Student Form Modal -->
+<div *ngIf="isFormOpen" class="modal-overlay">
+    <div class="modal-content">
+        <h3>{{ formMode === 'create' ? 'Create Student' : 'Update Student' }}</h3>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" [(ngModel)]="studentForm.name" required>
+            </div>
+            <div class="form-group">
+                <label>Student Code</label>
+                <input type="text" [(ngModel)]="studentForm.code" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" [(ngModel)]="studentForm.email" required>
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" [(ngModel)]="studentForm.phone" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Enrollment Date</label>
+                <input type="text" [(ngModel)]="studentForm.enrollmentDate" required>
+            </div>
+            <div class="form-group">
+                <label>Dob</label>
+                <input type="text" [(ngModel)]="studentForm.dob" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Status</label>
+            <select [(ngModel)]="studentForm.status">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+                <option value="Graduated">Graduated</option>
+            </select>
+            <div class="form-group">
+                <label>Class</label>
+                <input type="text" [(ngModel)]="studentForm.class[0]" required>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button (click)="submitForm()" class="save-btn">
+                {{ formMode === 'create' ? 'Create' : 'Update' }}
+              </button>
+            <button (click)="closeForm()" class="cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
