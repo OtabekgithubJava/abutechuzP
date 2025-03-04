@@ -17,8 +17,8 @@ import { ExamsComponent } from './pages/admin/exams/exams.component';
 import { GradesComponent } from './pages/admin/grades/grades.component';
 import { PaymentsComponent } from './pages/admin/payments/payments.component';
 import { ParentsComponent } from './pages/admin/parents/parents.component';
-import { VideosComponent } from './pages/admin/videos/videos.component';
 import { StudentsComponent } from './pages/admin/students/students.component';
+import { VideosComponent } from './pages/videos/videos.component';
 
 // @Injectable({
 //   providedIn: 'root'
@@ -39,7 +39,11 @@ import { StudentsComponent } from './pages/admin/students/students.component';
 const routes: Routes = [
   { path: 'app', component: AppComponent },
   { path: 'login', component: LoginComponent },
-  
+  { 
+    path: 'video', 
+    component: VideosComponent, 
+    pathMatch: 'full' 
+  },
   { 
     path: 'admin',
     children: [
@@ -57,14 +61,12 @@ const routes: Routes = [
           { path: 'grades', component: GradesComponent },
           { path: 'payments', component: PaymentsComponent },
           { path: 'parents', component: ParentsComponent },
-          { path: 'videos', component: VideosComponent },
           { path: '', redirectTo: 'students', pathMatch: 'full' }
         ]
       },
       { path: '', redirectTo: 'login', pathMatch: 'full' }
     ]
   },
-
   { path: '', redirectTo: 'app', pathMatch: 'full' },
   { path: '**', redirectTo: 'app' }
 ];

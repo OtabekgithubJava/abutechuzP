@@ -1,0 +1,40 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+<app-header></app-header>
+
+<div class="videos-container" [ngClass]="{'light-theme': isLightTheme}">
+  <!-- Theme Switcher -->
+  <div class="theme-switcher">
+    <i
+      [class]="isLightTheme ? 'fas fa-moon' : 'fas fa-sun'"
+      (click)="toggleTheme()"
+      class="theme-icon"
+    ></i>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search videos..."
+      (input)="searchVideos($event)"
+    />
+  </div>
+
+  <!-- Video Cards -->
+  <div class="video-grid">
+    <div *ngFor="let video of filteredVideos" class="video-card">
+      <iframe
+        width="100%"
+        height="200"
+        [src]="getSafeUrl(video.id)"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <h3 [ngClass]="{'light-title': isLightTheme, 'dark-title': !isLightTheme}">
+        {{ video.title }}
+      </h3>
+    </div>
+  </div>
+</div>

@@ -129,38 +129,38 @@ export class StudentsComponent implements OnInit {
   filterByCode(): void {
     console.log('Filtering by code:', this.codeFilter);
     if (this.codeFilter) {
-      this.studentService.getByCode(this.codeFilter).subscribe({
-        next: (data) => {
-          console.log('Filtered students by code:', data);
-          this.filteredStudents = data;
-        },
-        error: (err: any) => console.error('Filter error:', err)
-      });
+        this.studentService.getByCode(this.codeFilter).subscribe({
+            next: (data) => {
+                console.log('Filtered students by code:', data);
+                this.filteredStudents = data;
+            },
+            error: (err: any) => console.error('Filter error:', err)
+        });
     } else {
-      this.filteredStudents = [...this.students]; 
+        this.filteredStudents = [...this.students]; 
     }
-  }
-  
+}
+
   filterByCourse(): void {
-    console.log('Filtering by course ID:', this.courseIdFilter);
-    if (this.courseIdFilter) {
-      this.studentService.getByCourse(this.courseIdFilter).subscribe({
-        next: (data) => {
-          console.log('Filtered students by course:', data);
-          this.filteredStudents = data;
-        },
-        error: (err: any) => console.error('Filter error:', err)
-      });
-    } else {
-      this.filteredStudents = [...this.students]; 
-    }
+      console.log('Filtering by course ID:', this.courseIdFilter);
+      if (this.courseIdFilter) {
+          this.studentService.getByCourse(this.courseIdFilter).subscribe({
+              next: (data) => {
+                  console.log('Filtered students by course:', data);
+                  this.filteredStudents = data;
+              },
+              error: (err: any) => console.error('Filter error:', err)
+          });
+      } else {
+          this.filteredStudents = [...this.students]; 
+      }
   }
 
   clearFilters(): void {
     this.statusFilter = '';
     this.codeFilter = '';
     this.courseIdFilter = undefined;
-    this.filteredStudents = [...this.students];
+    this.filteredStudents = [...this.students]; 
   }
 
   closeForm(): void {

@@ -318,14 +318,17 @@ tbody tr:hover {
     min-width: auto;
     border-radius: 4px;
   }
-  
+
   .update-btn {
     display: inline-flex;
+    align-items: center;
+    gap: 5px; 
     background-color: #f1c40f;
     color: black;
-    width: 35px; 
-    height: 35px; 
-  }
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 4px;
+}
   
   .delete-btn {
     background-color: #e74c3c;

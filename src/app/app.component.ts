@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   constructor(private router: Router) {}
@@ -13,8 +13,11 @@ export class AppComponent {
     return this.router.url.startsWith('/login');
   }
 
-    isAdminRoute(): boolean {
-      return this.router.url.startsWith('/admin');
-    }
-  
+  isAdminRoute(): boolean {
+    return this.router.url.startsWith('/admin');
+  }
+
+  isVideoRoute(): boolean {
+    return this.router.url === '/video';
+  }
 }

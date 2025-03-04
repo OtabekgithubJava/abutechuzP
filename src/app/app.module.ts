@@ -47,8 +47,7 @@ import { PaymentsComponent } from './pages/admin/payments/payments.component';
 import { PaymentFormComponent } from './pages/admin/payments/payment-form/payment-form.component';
 import { ParentsComponent } from './pages/admin/parents/parents.component';
 import { ParentFormComponent } from './pages/admin/parents/parent-form/parent-form.component';
-import { VideosComponent } from './pages/admin/videos/videos.component';
-import { VideoFormComponent } from './pages/admin/videos/video-form/video-form.component';
+import { VideosComponent } from './pages/videos/videos.component';
 import { CoursesComponent } from './pages/admin/courses/courses.component';
 
 
@@ -86,9 +85,8 @@ import { CoursesComponent } from './pages/admin/courses/courses.component';
     PaymentFormComponent,
     ParentsComponent,
     ParentFormComponent,
-    VideosComponent,
-    VideoFormComponent,
-    CoursesComponent
+    CoursesComponent,
+    VideosComponent
   ],
   imports: [
     BrowserModule,
