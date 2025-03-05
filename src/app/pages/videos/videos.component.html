@@ -3,7 +3,6 @@
 <app-header></app-header>
 
 <div class="videos-container" [ngClass]="{'light-theme': isLightTheme}">
-  <!-- Theme Switcher -->
   <div class="theme-switcher">
     <i
       [class]="isLightTheme ? 'fas fa-moon' : 'fas fa-sun'"
@@ -12,7 +11,6 @@
     ></i>
   </div>
 
-  <!-- Search Bar -->
   <div class="search-bar">
     <input
       type="text"
@@ -21,7 +19,6 @@
     />
   </div>
 
-  <!-- Video Cards -->
   <div class="video-grid">
     <div *ngFor="let video of filteredVideos" class="video-card">
       <iframe

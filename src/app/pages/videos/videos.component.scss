@@ -1,13 +1,13 @@
 .videos-container {
   padding: 20px;
-  background-color: #121212; // Dark background
+  background-color: #121212; 
   min-height: 100vh;
-  color: #ffffff; // White text for contrast
+  color: #ffffff; 
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &.light-theme {
-    background-color: #f5f5f5; // Light background
-    color: #000000; // Black text for contrast
+    background-color: #f5f5f5; 
+    color: #000000; 
 
     .search-bar input {
       background-color: #ffffff;
@@ -24,18 +24,18 @@
   .theme-switcher {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 10px;
     z-index: 1000;
 
     .theme-icon {
       font-size: 24px;
       cursor: pointer;
       transition: transform 0.3s ease, color 0.3s ease;
-      color: #ff4757; // Highlight color for the icon
+      color: #ff4757; 
 
       &:hover {
         transform: scale(1.2);
-        color: #ff6b81; // Slightly lighter highlight color on hover
+        color: #ff6b81; 
       }
     }
   }

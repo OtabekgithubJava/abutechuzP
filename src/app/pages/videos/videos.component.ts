@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { title } from 'node:process';
 
 @Component({
   selector: 'app-videos',
@@ -28,7 +29,8 @@ export class VideosComponent implements OnInit {
     { id: 'xz_sPVhd-zI', title: 'Random kutubxonasi: C#da tosh, qaychi, qog\'oz o\'yini random orqali' },
     { id: 'tSGsBhsdIBU', title: 'Bubble Sort: Bubble sort qanday algoritm asosida ishlashini c#da o\'rganing' },
     { id: 'UaAu8NhUiFs', title: 'C# List, While & For: List elementlarni while va for looplari orqali aylantirish' },
-    { id: 'OLz9c0DE9gE', title: '42 Mimic: Htm & Css dan foydalanib 42.uz saytini 0dan yozish'}
+    { id: 'OLz9c0DE9gE', title: '42 Mimic: Htm & Css dan foydalanib 42.uz saytini 0dan yozish'},
+    { id: 'aoaHX-SJynY', title: 'Sakkiz: Kanalga post qoyadigan admin bolish uchun royhatdan otish'}
   ];
 
   filteredVideos = this.videos;
