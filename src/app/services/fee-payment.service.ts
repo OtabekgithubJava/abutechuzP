@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { FeePayment } from '../models/fee-payement';
+import { FeePayment, CreateFeePaymentDto, UpdateFeePaymentDto } from '../models/fee-payement';
 
 @Injectable({ providedIn: 'root' })
 export class FeePaymentService {
@@ -9,11 +9,11 @@ export class FeePaymentService {
 
   constructor(private http: HttpClient) {}
 
-  createPayment(payment: FeePayment): Observable<FeePayment> {
+  createPayment(payment: CreateFeePaymentDto): Observable<FeePayment> {
     return this.http.post<FeePayment>(`${this.apiUrl}/create`, payment);
   }
-
-  updatePayment(id: number, payment: FeePayment): Observable<FeePayment> {
+  
+  updatePayment(id: number, payment: UpdateFeePaymentDto): Observable<FeePayment> {
     return this.http.put<FeePayment>(`${this.apiUrl}/update/${id}`, payment);
   }
 

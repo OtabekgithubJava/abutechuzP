@@ -33,7 +33,7 @@ export class PaymentsComponent implements OnInit {
       studentId: 0,
       amount: 0,
       date: '',
-      status: false,
+      status: true,
       paymentMonth: ''
     };
   }
@@ -69,21 +69,42 @@ export class PaymentsComponent implements OnInit {
   }
 
   submitForm(): void {
-    const paymentDto: FeePayment = {
-        ...this.paymentForm
-    };
-
-    const serviceCall = this.formMode === 'create' 
-        ? this.paymentService.createPayment(paymentDto)
-        : this.paymentService.updatePayment(paymentDto.id, paymentDto);
-
-    serviceCall.subscribe({
+    if (this.formMode === 'create') {
+      const createDto = {
+        studentId: this.paymentForm.studentId,
+        amount: this.paymentForm.amount,
+        date: this.paymentForm.date,
+        status: this.paymentForm.status,
+        paymentMonth: this.paymentForm.paymentMonth
+      };
+  
+      console.log('Create Payload:', createDto); 
+  
+      this.paymentService.createPayment(createDto).subscribe({
         next: () => {
-            this.loadPayments();
-            this.closeForm();
+          this.loadPayments();
+          this.closeForm();
         },
-        error: (err) => console.error('Operation failed:', err)
-    });
+        error: (err) => console.error('Create failed:', err)
+      });
+    } else if (this.formMode === 'update') {
+      const updateDto = {
+        amount: this.paymentForm.amount,
+        date: this.paymentForm.date,
+        status: this.paymentForm.status,
+        paymentMonth: this.paymentForm.paymentMonth
+      };
+  
+      console.log('Update Payload:', updateDto); 
+  
+      this.paymentService.updatePayment(this.paymentForm.id, updateDto).subscribe({
+        next: () => {
+          this.loadPayments();
+          this.closeForm();
+        },
+        error: (err) => console.error('Update failed:', err)
+      });
+    }
   }
 
   loadPayments(): void {

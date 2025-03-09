@@ -9,7 +9,7 @@
     </div>
 
     <form class="login-form" (ngSubmit)="onLogin()">
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
         <input matInput 
                [(ngModel)]="username" 
@@ -19,7 +19,7 @@
         <mat-icon matPrefix>person_outline</mat-icon>
       </mat-form-field>
 
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="fill">
         <mat-label>Password</mat-label>
         <input matInput 
                [(ngModel)]="password" 
