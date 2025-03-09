@@ -9,6 +9,7 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'N28rTpoJqUI', title: 'C++: C++ tilidagi ma\'limot turlari va o\'zgaruvchilar' },
     { id: 'UIubOOngvjM', title: 'Twillio: SMS jo\'natish tizimi Twillio configuratsiyasi orqali' },
     { id: 'UKr-la5-B3o', title: 'ADO.NET: Databazaga malimot yuklab, malimot o\'qish' },
     { id: 'JbdoXk4_cUw', title: 'PGAdmin: PostgreSQLdagi kuchliroq darajadagi metodlar va amaliyot' },

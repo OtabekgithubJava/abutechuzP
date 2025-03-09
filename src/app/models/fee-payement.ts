@@ -1,10 +1,8 @@
-import { Student } from "./student";
-
 export interface FeePayment {
   id: number;
   studentId: number;
   amount: number;
-  date: Date;
+  date: string; 
   status: boolean;
   paymentMonth?: string;
 }

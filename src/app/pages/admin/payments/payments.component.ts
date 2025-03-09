@@ -32,7 +32,7 @@ export class PaymentsComponent implements OnInit {
       id: 0,
       studentId: 0,
       amount: 0,
-      date: new Date(),
+      date: '',
       status: false,
       paymentMonth: ''
     };
@@ -62,37 +62,36 @@ export class PaymentsComponent implements OnInit {
     this.loadPayments();
   }
 
-  loadPayments(): void {
-    this.paymentService.getAllPayments().subscribe({
-      next: (data) => this.payments = data,
-      error: (err) => console.error('Error loading payments:', err)
-    });
-  }
-
   openForm(mode: 'create' | 'update', payment?: FeePayment): void {
     this.formMode = mode;
     this.isFormOpen = true;
     this.paymentForm = payment ? { ...payment } : this.getDefaultForm();
   }
 
-    submitForm(): void {
-      const paymentDto: FeePayment = {
-        ...this.paymentForm,
-        date: new Date(this.paymentForm.date) 
-      };
+  submitForm(): void {
+    const paymentDto: FeePayment = {
+        ...this.paymentForm
+    };
 
-      const serviceCall = this.formMode === 'create' 
+    const serviceCall = this.formMode === 'create' 
         ? this.paymentService.createPayment(paymentDto)
         : this.paymentService.updatePayment(paymentDto.id, paymentDto);
 
-      serviceCall.subscribe({
+    serviceCall.subscribe({
         next: () => {
-          this.loadPayments();
-          this.closeForm();
+            this.loadPayments();
+            this.closeForm();
         },
         error: (err) => console.error('Operation failed:', err)
+    });
+  }
+
+  loadPayments(): void {
+      this.paymentService.getAllPayments().subscribe({
+          next: (data) => this.payments = data,
+          error: (err) => console.error('Error loading payments:', err)
       });
-    }
+  }
 
 
   deletePayment(id: number): void {

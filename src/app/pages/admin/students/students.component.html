@@ -10,23 +10,35 @@
 
         <div class="filter-group">
             <div class="filter-item">
-                <input type="text" placeholder="Student Code" [(ngModel)]="codeFilter">
-                <button class="filter-btn" (click)="filterByCode()">
-                    <i class="fas fa-id-card"></i>
-                </button>
+              <input type="text" placeholder="Student Code" [(ngModel)]="codeFilter">
+              <button class="filter-btn" (click)="filterByCode()">
+                <i class="fas fa-id-card"></i>
+              </button>
             </div>
-            
+          
             <div class="filter-item">
-                <input type="number" placeholder="Course ID" [(ngModel)]="courseIdFilter">
-                <button class="filter-btn" (click)="filterByCourse()">
-                    <i class="fas fa-book-open"></i>
-                </button>
+              <input type="number" placeholder="Course ID" [(ngModel)]="courseIdFilter">
+              <button class="filter-btn" (click)="filterByCourse()">
+                <i class="fas fa-book-open"></i>
+              </button>
             </div>
-
+          
+            <div class="filter-item">
+              <select [(ngModel)]="statusFilter">
+                <option value="">All Statuses</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+                <option value="Graduated">Graduated</option>
+              </select>
+              <button class="filter-btn" (click)="filterByStatus()">
+                <i class="fas fa-filter"></i>
+              </button>
+            </div>
+          
             <button class="clear-btn" (click)="clearFilters()">
-                <i class="fas fa-times-circle"></i>
+              <i class="fas fa-times-circle"></i>
             </button>
-        </div>
+          </div>
     </div>
 
     <table>

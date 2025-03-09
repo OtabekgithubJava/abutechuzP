@@ -113,8 +113,8 @@ export class StudentsComponent implements OnInit {
 
   filterByStatus(): void {
     console.log('Filtering by status:', this.statusFilter);
-    if (this.statusFilter) {
-      this.studentService.getByStatus(this.statusFilter).subscribe({
+    if (this.statusFilter && this.statusFilter.trim() !== '') {
+      this.studentService.getByStatus(this.statusFilter.trim()).subscribe({
         next: (data) => {
           console.log('Filtered students by status:', data);
           this.filteredStudents = data;
@@ -122,38 +122,38 @@ export class StudentsComponent implements OnInit {
         error: (err: any) => console.error('Filter error:', err)
       });
     } else {
-      this.filteredStudents = [...this.students];
+      this.filteredStudents = [...this.students]; 
     }
   }
   
   filterByCode(): void {
     console.log('Filtering by code:', this.codeFilter);
-    if (this.codeFilter) {
-        this.studentService.getByCode(this.codeFilter).subscribe({
-            next: (data) => {
-                console.log('Filtered students by code:', data);
-                this.filteredStudents = data;
-            },
-            error: (err: any) => console.error('Filter error:', err)
-        });
+    if (this.codeFilter && this.codeFilter.trim() !== '') {
+      this.studentService.getByCode(this.codeFilter.trim()).subscribe({
+        next: (data) => {
+          console.log('Filtered students by code:', data);
+          this.filteredStudents = data;
+        },
+        error: (err: any) => console.error('Filter error:', err)
+      });
     } else {
-        this.filteredStudents = [...this.students]; 
+      this.filteredStudents = [...this.students]; 
     }
-}
+  }
 
   filterByCourse(): void {
-      console.log('Filtering by course ID:', this.courseIdFilter);
-      if (this.courseIdFilter) {
-          this.studentService.getByCourse(this.courseIdFilter).subscribe({
-              next: (data) => {
-                  console.log('Filtered students by course:', data);
-                  this.filteredStudents = data;
-              },
-              error: (err: any) => console.error('Filter error:', err)
-          });
-      } else {
-          this.filteredStudents = [...this.students]; 
-      }
+    console.log('Filtering by course ID:', this.courseIdFilter);
+    if (this.courseIdFilter && this.courseIdFilter > 0) { 
+      this.studentService.getByCourse(this.courseIdFilter).subscribe({
+        next: (data) => {
+          console.log('Filtered students by course:', data);
+          this.filteredStudents = data;
+        },
+        error: (err: any) => console.error('Filter error:', err)
+      });
+    } else {
+      this.filteredStudents = [...this.students]; 
+    }
   }
 
   clearFilters(): void {
