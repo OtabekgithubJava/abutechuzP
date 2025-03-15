@@ -259,4 +259,31 @@
         font-size: 14px;
       }
     }
+
+    @media (max-width: 768px) {
+      .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      table {
+        display: none;
+      }
+
+      tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+      }
+    }
   }

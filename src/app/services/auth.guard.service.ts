@@ -9,10 +9,17 @@ import { Observable } from 'rxjs';
 export class AuthGuardService implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
 
-  canActivate(): boolean | UrlTree {
-    if (this.authService.isLoggedIn()) {
-      return true;
+  canActivate(route: any): boolean | UrlTree {
+    if (route.routeConfig.path === 'video') {
+      if (this.authService.isVideoAuthenticated()) {
+        return true;
+      }
+      return this.router.parseUrl('/admin/login');
+    } else {
+      if (this.authService.isLoggedIn()) {
+        return true;
+      }
+      return this.router.parseUrl('/admin/login');
     }
-    return this.router.parseUrl('/admin/login');
   }
 }

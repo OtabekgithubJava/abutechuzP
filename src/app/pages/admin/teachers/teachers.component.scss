@@ -170,18 +170,30 @@ input {
   background-color: #7f8c8d;
 }
 
+
 @media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
   .button-container {
     flex-direction: column;
     align-items: flex-start;
   }
+}
 
-  button {
-    width: auto;
+@media (max-width: 480px) {
+  table {
+    display: none;
   }
 
-  .modal-content {
-    width: 80%;
-    padding: 15px;
+  tbody tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
   }
 }

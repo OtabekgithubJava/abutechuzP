@@ -1,65 +1,64 @@
 <div class="admin-dashboard flex">
-    <aside class="sidebar w-64 bg-gray-800 text-white min-h-screen p-4">
-        <h2 class="text-xl font-bold mb-4">Admin Panel</h2>
-        <nav>
-            <ul class="space-y-2">
-                <li><a [routerLink]="['/admin/dashboard']" routerLinkActive="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-                <li><a [routerLink]="['/admin/dashboard/students']" routerLinkActive="active"><i class="fas fa-user-graduate"></i> Students</a></li>
-                <li><a [routerLink]="['/admin/dashboard/teachers']" routerLinkActive="active"><i class="fas fa-chalkboard-teacher"></i> Teachers</a></li>
-                <li><a [routerLink]="['/admin/dashboard/courses']" routerLinkActive="active"><i class="fas fa-book"></i> Courses</a></li>
-                <li><a [routerLink]="['/admin/dashboard/exams']" routerLinkActive="active"><i class="fas fa-file-alt"></i> Exams</a></li>
-                <li><a [routerLink]="['/admin/dashboard/grades']" routerLinkActive="active"><i class="fas fa-graduation-cap"></i> Grades</a></li>
-                <li><a [routerLink]="['/admin/dashboard/payments']" routerLinkActive="active"><i class="fas fa-credit-card"></i> Payments</a></li>
-                <li><a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-            </ul>
-        </nav>
-    </aside>
-  
-    <main class="content flex-1 p-6 bg-gray-100">
-        <header class="top-bar flex justify-between items-center mb-4">
-            <h1 class="text-2xl font-bold">Dashboard</h1>
-            <div class="user-info text-gray-700">
-                <span class="jfj">Welcome, Admin</span>
-            </div>
-        </header>
-  
-        <!-- Date Picker -->
-        <div class="date-table">
-            <div class="relative max-w-sm">
-                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                    </svg>
-                </div>
-                <input id="datepicker-actions" datepicker datepicker-buttons datepicker-autoselect-today 
-                       type="text" 
-                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  
-                              dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
-                       placeholder="Select date">
-            </div>
-        </div>
-  
-        <div class="children">
-            <router-outlet></router-outlet>
-        </div>
-    </main>
-  </div>
-  
-  <!-- Mobile Footer -->
-  <footer class="mobile-footer hidden md:hidden fixed bottom-0 left-0 w-full bg-gray-900 text-white shadow-lg">
-    <ul class="flex justify-around p-3">
-        <li><a href="#" class="flex flex-col items-center text-center hover:text-blue-400">
-            <i class="fas fa-tachometer-alt text-lg"></i><span class="text-xs mt-1">Dashboard</span></a>
-        </li>
-        <li><a href="#" class="flex flex-col items-center text-center hover:text-blue-400">
-            <i class="fas fa-user-graduate text-lg"></i><span class="text-xs mt-1">Students</span></a>
-        </li>
-        <li><a href="#" class="flex flex-col items-center text-center hover:text-blue-400">
-            <i class="fas fa-chalkboard-teacher text-lg"></i><span class="text-xs mt-1">Teachers</span></a>
-        </li>
-        <li><a href="#" class="flex flex-col items-center text-center hover:text-blue-400">
-            <i class="fas fa-book text-lg"></i><span class="text-xs mt-1">Courses</span></a>
-        </li>
-    </ul>
-  </footer>
-  
+  <aside class="sidebar w-64 bg-gray-800 text-white min-h-screen p-4">
+      <h2 class="text-xl font-bold mb-4">Admin Panel</h2>
+      <nav>
+          <ul class="space-y-2">
+              <li><a [routerLink]="['/admin/dashboard']" routerLinkActive="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+              <li><a [routerLink]="['/admin/dashboard/students']" routerLinkActive="active"><i class="fas fa-user-graduate"></i> Students</a></li>
+              <li><a [routerLink]="['/admin/dashboard/teachers']" routerLinkActive="active"><i class="fas fa-chalkboard-teacher"></i> Teachers</a></li>
+              <li><a [routerLink]="['/admin/dashboard/courses']" routerLinkActive="active"><i class="fas fa-book"></i> Courses</a></li>
+              <li><a [routerLink]="['/admin/dashboard/exams']" routerLinkActive="active"><i class="fas fa-file-alt"></i> Exams</a></li>
+              <li><a [routerLink]="['/admin/dashboard/grades']" routerLinkActive="active"><i class="fas fa-graduation-cap"></i> Grades</a></li>
+              <li><a [routerLink]="['/admin/dashboard/payments']" routerLinkActive="active"><i class="fas fa-credit-card"></i> Payments</a></li>
+              <li><a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+          </ul>
+      </nav>
+  </aside>
+
+  <main class="content flex-1 p-6 bg-gray-100">
+      <header class="top-bar flex justify-between items-center mb-4">
+          <h1 class="text-2xl font-bold">Dashboard</h1>
+          <div class="user-info text-gray-700">
+              <span class="jfj">Welcome, Admin</span>
+          </div>
+      </header>
+
+
+      <!-- <div class="date-table">
+          <div class="relative max-w-sm">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                  </svg>
+              </div>
+              <input id="datepicker-actions" datepicker datepicker-buttons datepicker-autoselect-today 
+                     type="text" 
+                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  
+                            dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                     placeholder="Select date">
+          </div>
+      </div> -->
+
+      <div class="children">
+          <router-outlet></router-outlet>
+      </div>
+  </main>
+</div>
+
+
+<footer class="mobile-footer hidden md:hidden fixed bottom-0 left-0 w-full bg-gray-900 text-white shadow-lg">
+  <ul class="flex justify-around p-3">
+      <li><a href="#" class="flex flex-col items-center text-center hover:text-blue-400">
+          <i class="fas fa-tachometer-alt text-lg"></i><span class="text-xs mt-1">Dashboard</span></a>
+      </li>
+      <li><a href="#" class="flex flex-col items-center text-center hover:text-blue-400">
+          <i class="fas fa-user-graduate text-lg"></i><span class="text-xs mt-1">Students</span></a>
+      </li>
+      <li><a href="#" class="flex flex-col items-center text-center hover:text-blue-400">
+          <i class="fas fa-chalkboard-teacher text-lg"></i><span class="text-xs mt-1">Teachers</span></a>
+      </li>
+      <li><a href="#" class="flex flex-col items-center text-center hover:text-blue-400">
+          <i class="fas fa-book text-lg"></i><span class="text-xs mt-1">Courses</span></a>
+      </li>
+  </ul>
+</footer>

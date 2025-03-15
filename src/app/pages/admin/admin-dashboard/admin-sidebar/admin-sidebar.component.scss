@@ -1,0 +1,39 @@
+@media screen and (max-width: 768px) {
+    .sidebar {
+      width: 70%;
+      max-width: 250px;
+      transform: translateX(-100%);
+      position: fixed;
+      height: 100%;
+      transition: transform 0.3s ease-in-out;
+      z-index: 1000;
+    }
+  
+    .sidebar.hidden-sidebar {
+      transform: translateX(0);
+    }
+  
+    .content {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .toggle-btn {
+      display: block;
+    }
+  
+    .mobile-footer {
+      display: flex;
+    }
+  }
+  
+  @media screen and (min-width: 769px) {
+    .toggle-btn {
+      display: none;
+    }
+  
+    .mobile-footer {
+      display: none;
+    }
+  }
+  

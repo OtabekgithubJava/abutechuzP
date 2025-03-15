@@ -1,12 +1,20 @@
-<nav>
-    <ul>
-        <li><a routerLink="/admin" routerLinkActive="active">Dashboard</a></li>
-        <li><a routerLink="/admin/students" routerLinkActive="active">Students</a></li>
-        <li><a routerLink="/admin/teachers" routerLinkActive="active">Teachers</a></li>
-        <li><a routerLink="/admin/courses" routerLinkActive="active">Courses</a></li>
-        <li><a routerLink="/admin/exams" routerLinkActive="active">Exams</a></li>
-        <li><a routerLink="/admin/grades" routerLinkActive="active">Grades</a></li>
-        <li><a routerLink="/admin/payments" routerLinkActive="active">Payments</a></li>
-        <li><a href="#">Logout</a></li>
-    </ul>
-</nav>
+<button class="toggle-btn" (click)="toggleSidebar()">
+    <i [ngClass]="isSidebarVisible ? 'fas fa-times' : 'fas fa-bars'"></i>
+  </button>
+  
+  <aside class="sidebar" [ngClass]="{ 'hidden-sidebar': isSidebarVisible }">
+    <h2 class="text-xl font-bold mb-4">Admin Panel</h2>
+    <nav>
+      <ul>
+        <li><a routerLink="/admin/dashboard" routerLinkActive="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a routerLink="/admin/students" routerLinkActive="active"><i class="fas fa-user-graduate"></i> Students</a></li>
+        <li><a routerLink="/admin/teachers" routerLinkActive="active"><i class="fas fa-chalkboard-teacher"></i> Teachers</a></li>
+        <li><a routerLink="/admin/courses" routerLinkActive="active"><i class="fas fa-book"></i> Courses</a></li>
+        <li><a routerLink="/admin/exams" routerLinkActive="active"><i class="fas fa-file-alt"></i> Exams</a></li>
+        <li><a routerLink="/admin/grades" routerLinkActive="active"><i class="fas fa-graduation-cap"></i> Grades</a></li>
+        <li><a routerLink="/admin/payments" routerLinkActive="active"><i class="fas fa-credit-card"></i> Payments</a></li>
+        <li><a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+  

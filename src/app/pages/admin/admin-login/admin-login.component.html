@@ -1,51 +1,51 @@
 <div class="login-container">
-    <div class="glass-card">
-      <div class="header">
-        <div class="logo-container">
-          <img src="images/logo.svg" alt="Abutech Logo" class="logo">
-        </div>
-        <h1 class="title">Welcome to Abutech</h1>
-        <p class="subtitle">Administrator Portal</p>
+  <div class="glass-card">
+    <div class="header">
+      <div class="logo-container">
+        <img src="images/logo.svg" alt="Abutech Logo" class="logo">
       </div>
-  
-      <form class="login-form" (ngSubmit)="onLogin()">
-        <mat-form-field appearance="outline">
-          <mat-label>Email</mat-label>
-          <input matInput 
-                 [(ngModel)]="username" 
-                 name="username"
-                 type="email"
-                 required>
-          <mat-icon matPrefix>person_outline</mat-icon>
-        </mat-form-field>
-  
-        <mat-form-field appearance="outline">
-          <mat-label>Password</mat-label>
-          <input matInput 
-                 [(ngModel)]="password" 
-                 name="password"
-                 type="password"
-                 required>
-          <mat-icon matPrefix>lock_outline</mat-icon>
-        </mat-form-field>
-  
-        <div class="actions">
-          <mat-checkbox color="primary">Remember me</mat-checkbox>
-          <a class="forgot-password" href="#">Forgot Password?</a>
-        </div>
-  
-        <button mat-raised-button 
-                color="primary" 
-                class="login-button"
-                type="submit">
-          Sign In
-          <mat-icon>arrow_forward</mat-icon>
-        </button>
-  
-        <div *ngIf="errorMessage" class="error-message">
-          <mat-icon>error_outline</mat-icon>
-          {{ errorMessage }}
-        </div>
-      </form>
+      <h1 class="title">Welcome to Abutech</h1>
+      <p class="subtitle">Administrator Portal</p>
     </div>
+
+    <form class="login-form" (ngSubmit)="onLogin()">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput 
+               [(ngModel)]="username" 
+               name="username"
+               type="email"
+               required>
+        <mat-icon matPrefix>person_outline</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput 
+               [(ngModel)]="password" 
+               name="password"
+               type="password"
+               required>
+        <mat-icon matPrefix>lock_outline</mat-icon>
+      </mat-form-field>
+
+      <div class="actions">
+        <mat-checkbox color="primary">Remember me</mat-checkbox>
+        <a class="forgot-password" href="#">Forgot Password?</a>
+      </div>
+
+      <button mat-raised-button 
+              color="primary" 
+              class="login-button"
+              type="submit">
+        Sign In
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+
+      <div *ngIf="errorMessage" class="error-message">
+        <mat-icon>error_outline</mat-icon>
+        {{ errorMessage }}
+      </div>
+    </form>
   </div>
+</div>

@@ -24,4 +24,28 @@ export class AuthService {
       localStorage.removeItem('isAuthenticated');
     }
   }
+
+
+  videoLogin(email: string, password: string): boolean {
+    if (email === 'abutech@outlook.com' && password === '15215') {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('isVideoAuthenticated', 'true');
+      }
+      return true;
+    }
+    return false;
+  }
+
+  isVideoAuthenticated(): boolean {
+    if (typeof window !== 'undefined' && localStorage.getItem('isVideoAuthenticated') === 'true') {
+      return true;
+    }
+    return false;
+  }
+
+  videoLogout(): void {
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('isVideoAuthenticated');
+    }
+  }
 }

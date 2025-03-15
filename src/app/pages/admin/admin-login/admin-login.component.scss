@@ -1,10 +1,9 @@
-/* admin-login.component.scss */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4F46E5 0%, #10B981 100%);
   padding: 2rem;
   font-family: 'Poppins', sans-serif;
 }
@@ -60,26 +59,24 @@
   mat-form-field {
     width: 100%;
 
+    .mat-form-field-appearance-fill .mat-form-field-flex {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      border: 1px solid rgba(160, 174, 192, 0.3);
+    }
+
+    &:hover .mat-form-field-flex {
+      border-color: #4F46E5;
+    }
+
+    .mat-form-field-flex.mat-form-field-focused {
+      border-color: #4F46E5;
+      border-width: 2px;
+    }
+
     mat-icon {
       color: #a0aec0;
       opacity: 0.8;
-    }
-
-    .mat-form-field-outline {
-      border-radius: 12px;
-    }
-
-    .mat-form-field-wrapper {
-      padding-bottom: 0;
-    }
-
-    .mat-form-field-outline-start,
-    .mat-form-field-outline-end {
-      border-color: rgba(160, 174, 192, 0.3);
-    }
-
-    .mat-form-field-outline-thick {
-      border-color: #667eea;
     }
 
     .mat-input-element {
@@ -100,14 +97,14 @@
   margin-top: 0.5rem;
 
   .forgot-password {
-    color: #667eea;
+    color: #4F46E5;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
     transition: color 0.2s ease;
 
     &:hover {
-      color: #5a6cd1;
+      color: #4338CA;
       text-decoration: underline;
     }
   }
@@ -119,7 +116,7 @@
   font-weight: 600;
   font-size: 1rem;
   border-radius: 12px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4F46E5 0%, #10B981 100%);
   color: white;
   border: none;
   cursor: pointer;
@@ -133,12 +130,12 @@
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 16px rgba(79, 70, 229, 0.3);
   }
 
   &:active {
     transform: translateY(0);
-    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 8px rgba(79, 70, 229, 0.3);
   }
 }
 
@@ -146,7 +143,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #e53e3e;
+  color: #EF4444;
   background: #fff5f5;
   padding: 12px;
   border-radius: 12px;
@@ -159,7 +156,6 @@
   }
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
   .glass-card {
     padding: 2rem;

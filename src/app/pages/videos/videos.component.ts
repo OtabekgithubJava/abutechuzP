@@ -9,6 +9,8 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: '8nQQM7MZXuU', title: 'EntityFrameWorCore 2-qism: Controller, Migration, API vahokazo' },
+    { id: 'Gx9m2YCxFyA', title: 'EntityFrameWorkCore: ConectionString sozlashgacha...' },
     { id: 'tsuLo29faqc', title: 'LINQ: Where, Select, OrderBy, OrderByDecending...' },
     { id: 'N28rTpoJqUI', title: 'C++: C++ tilidagi ma\'limot turlari va o\'zgaruvchilar' },
     { id: 'UIubOOngvjM', title: 'Twillio: SMS jo\'natish tizimi Twillio configuratsiyasi orqali' },

@@ -27,6 +27,14 @@ export class AdminLoginComponent {
       }).then(() => {
         window.location.reload();
       });
+    } else if (this.username === 'abutech@outlook.com' && this.password === '15215') {
+      localStorage.setItem('isVideoAuthenticated', 'true');
+      this.router.navigate(['/video'], { 
+        replaceUrl: true,
+        queryParamsHandling: 'merge'
+      }).then(() => {
+        window.location.reload();
+      });
     } else {
       this.errorMessage = 'Xato parol yoki email!';
       this.password = '';
