@@ -112,6 +112,33 @@
     }
   }
 
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  
+    .filter-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      background-color: #ff4757;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  
+      &:hover {
+        background-color: #ff6b81;
+        transform: scale(1.05);
+      }
+  
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     .video-grid {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

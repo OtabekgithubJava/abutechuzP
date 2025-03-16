@@ -19,6 +19,12 @@
     />
   </div>
 
+  <div class="filter-buttons">
+    <button (click)="filterVideos('All')" class="filter-button">All</button>
+    <button (click)="filterVideos('C#')" class="filter-button">C#</button>
+    <button (click)="filterVideos('C++')" class="filter-button">C++</button>
+  </div>
+
   <div class="video-grid">
     <div *ngFor="let video of filteredVideos" class="video-card">
       <iframe
