@@ -9,6 +9,8 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'xOD7vcOXW8I', title: 'C++ Switch Case & Break: Hafta kunini tekshirish', type: 'C++' },
+    { id: '8QuAhalZg6k', title: 'C++ Input: CIN orqali foydalanuvchidan ma\'limot olish', type: 'C++' },
     { id: 'L8Egk_GQHZc', title: 'C++da qiymat o\'zgartirish: faqat 1 soatgacha dars', type: 'C++' },
     { id: '8nQQM7MZXuU', title: 'EntityFrameWorCore 2-qism: Controller, Migration, API vahokazo', type: 'C#' },
     { id: 'Gx9m2YCxFyA', title: 'EntityFrameWorkCore: ConectionString sozlashgacha...', type: 'C#' },
