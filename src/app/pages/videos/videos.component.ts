@@ -9,6 +9,7 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: '2F2Ky-YSM40', title: 'C# API: Service & IService qismida CRUD operatsiyasi', type: 'C#' },
     { id: 'X6Pp0FLHbl4', title: 'C++ String Methods: Length, Size, Index, At, Append', type: 'C++' },
     { id: 'xOD7vcOXW8I', title: 'C++ Switch Case & Break: Hafta kunini tekshirish', type: 'C++' },
     { id: '8QuAhalZg6k', title: 'C++ Input: CIN orqali foydalanuvchidan ma\'limot olish', type: 'C++' },
