@@ -9,6 +9,7 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'ouoss63af9M', title: 'C# MULTI-CRUD: Ikkita model (table)ni bir biriga ulash', type: 'C#' },
     { id: 'GzkJ6QzYvLs', title: 'C++ While Loop: Katta imtihonlarga kerakli algoritmlar', type: 'C++' },
     { id: '2F2Ky-YSM40', title: 'C# API: Service & IService qismida CRUD operatsiyasi', type: 'C#' },
     { id: 'X6Pp0FLHbl4', title: 'C++ String Methods: Length, Size, Index, At, Append', type: 'C++' },
