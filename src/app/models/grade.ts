@@ -1,12 +1,22 @@
-import { Student } from './student';
-import { Course } from './course';
-import { ExamType, GradeRemarks } from '../enums/enum';
-
 export interface Grade {
   id: number;
-  student: Student;
-  course: Course;
-  examType?: ExamType;      
+  studentId: number;
+  courseId: number;
   score: number;
-  remarks: GradeRemarks;  
+  examType?: string;
+  remarks?: string;
+}
+
+export interface CreateGradeDto {
+  studentId: number;
+  courseId: number;
+  score: number;
+  examType?: string;
+  remarks?: string;
+}
+
+export interface UpdateGradeDto {
+  score: number;
+  examType?: string;
+  remarks?: string;
 }

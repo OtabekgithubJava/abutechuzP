@@ -1,1 +1,87 @@
-<p>grades works!</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="container">
+    <h2>Grades List</h2>
+  
+    <div class="button-container">
+        <button class="create-btn" (click)="openForm('create')">➕ Assign Grade</button>
+    
+        <div class="filter-group">
+            <div class="filter-item">
+                <input type="number" placeholder="Student ID" [(ngModel)]="filterStudentId">
+                <button class="filter-btn" (click)="filterByStudent()">
+                    <i class="fas fa-user-graduate"></i>
+                </button>
+            </div>
+    
+            <div class="filter-item">
+                <input type="number" placeholder="Course ID" [(ngModel)]="filterCourseId">
+                <button class="filter-btn" (click)="filterByCourse()">
+                    <i class="fas fa-book"></i>
+                </button>
+            </div>
+    
+            <button class="clear-btn" (click)="clearFilters()">
+                <i class="fas fa-times-circle"></i> Clear
+            </button>
+        </div>
+    </div>
+  
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student ID</th>
+                <th>Course ID</th>
+                <th>Score</th>
+                <th>Exam Type</th>
+                <th>Remarks</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let grade of grades; trackBy: trackByGrade">
+                <td>{{ grade.id }}</td>
+                <td>{{ grade.studentId }}</td>
+                <td>{{ grade.courseId }}</td>
+                <td>{{ grade.score }}</td>
+                <td>{{ grade.examType || '-' }}</td>
+                <td>{{ grade.remarks || '-' }}</td>
+                <td>
+                    <div>
+                        <button class="update-btn" (click)="openForm('update', grade)" title="Edit">✏️</button>
+                        <button class="delete-btn" (click)="deleteGrade(grade.id)" title="Delete">🗑️</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+  
+<div *ngIf="isFormOpen" class="modal-overlay">
+    <div class="modal-content">
+        <h3>{{ formMode === 'create' ? 'Assign Grade' : 'Update Grade' }}</h3>
+        
+        <label>Student ID:</label>
+        <input type="number" [(ngModel)]="gradeForm.studentId" required>
+    
+        <label>Course ID:</label>
+        <input type="number" [(ngModel)]="gradeForm.courseId" required>
+    
+        <label>Score (0-100):</label>
+        <input type="number" [(ngModel)]="gradeForm.score" min="0" max="100" required>
+    
+        <label>Exam Type:</label>
+        <input type="text" [(ngModel)]="gradeForm.examType">
+    
+        <label>Remarks:</label>
+        <input type="text" [(ngModel)]="gradeForm.remarks">
+    
+        <div class="button-group">
+            <button (click)="submitForm()" class="save-btn">
+                {{ formMode === 'create' ? 'Assign' : 'Update' }}
+            </button>
+            <button (click)="closeForm()" class="cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>

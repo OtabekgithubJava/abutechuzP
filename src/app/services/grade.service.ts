@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Grade } from '../models/grade';
+import { Grade, CreateGradeDto, UpdateGradeDto } from '../models/grade';
 
 @Injectable({ providedIn: 'root' })
 export class GradeService {
@@ -9,11 +9,11 @@ export class GradeService {
 
   constructor(private http: HttpClient) {}
 
-  assignGrade(grade: Grade): Observable<Grade> {
+  assignGrade(grade: CreateGradeDto): Observable<Grade> {
     return this.http.post<Grade>(`${this.apiUrl}/assign`, grade);
   }
 
-  updateGrade(id: number, grade: Grade): Observable<Grade> {
+  updateGrade(id: number, grade: UpdateGradeDto): Observable<Grade> {
     return this.http.put<Grade>(`${this.apiUrl}/update/${id}`, grade);
   }
 
@@ -29,11 +29,11 @@ export class GradeService {
     return this.http.get<Grade[]>(`${this.apiUrl}/getAll`);
   }
 
-  getByCourse(courseId: number): Observable<Grade[]> {
-    return this.http.get<Grade[]>(`${this.apiUrl}/byCourse/${courseId}`);
-  }
-
   getByStudent(studentId: number): Observable<Grade[]> {
     return this.http.get<Grade[]>(`${this.apiUrl}/byStudent/${studentId}`);
+  }
+
+  getByCourse(courseId: number): Observable<Grade[]> {
+    return this.http.get<Grade[]>(`${this.apiUrl}/byCourse/${courseId}`);
   }
 }
