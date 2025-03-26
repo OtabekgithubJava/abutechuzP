@@ -9,6 +9,7 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'kfUcNcKMXNk', title: 'C# Design Pattern: BaseRepo Design Patternga birichi qadam', type: 'C#' },
     { id: 'uqAi54pEdB4', title: 'C++ loop va ASCII: va boshqa string, char, ASCII misollar', type: 'C++' },
     { id: 'Sr77bQXbNgo', title: 'C# TRIPLE-CRUD: uchta model (table)ni bir biriga ulash', type: 'C#' },
     { id: 'ouoss63af9M', title: 'C# MULTI-CRUD: Ikkita model (table)ni bir biriga ulash', type: 'C#' },
