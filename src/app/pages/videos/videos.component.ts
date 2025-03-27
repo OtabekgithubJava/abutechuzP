@@ -9,6 +9,7 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'JZX5tWi3Exw', title: 'C++ Nested For: Ichma-ich for orqali bir nechta algoritmlar', type: 'C++' },
     { id: 'kfUcNcKMXNk', title: 'C# Design Pattern: BaseRepo Design Patternga birichi qadam', type: 'C#' },
     { id: 'uqAi54pEdB4', title: 'C++ loop va ASCII: va boshqa string, char, ASCII misollar', type: 'C++' },
     { id: 'Sr77bQXbNgo', title: 'C# TRIPLE-CRUD: uchta model (table)ni bir biriga ulash', type: 'C#' },
