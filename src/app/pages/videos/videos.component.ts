@@ -9,6 +9,7 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: '_YkN9XiL0iY', title: 'C# Email: Account sozlash va google orqali email jo\'natish', type: 'C#' },
     { id: 'xwSGc_R_B-Q', title: 'C# Application: Har xil turdagi Get() orqali filterlashlar', type: 'C#' },
     { id: 'JZX5tWi3Exw', title: 'C++ Nested For: Ichma-ich for orqali bir nechta algoritmlar', type: 'C++' },
     { id: 'kfUcNcKMXNk', title: 'C# Design Pattern: BaseRepo Design Patternga birichi qadam', type: 'C#' },
