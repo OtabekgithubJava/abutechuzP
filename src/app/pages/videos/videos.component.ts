@@ -9,6 +9,7 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'l3_w6c-0VSU', title: 'C++ Array: Array va 1-oy mavzulari bo\'yicha takrorlash', type: 'C++' },  
     { id: 'fk1yj791Y0Y', title: 'C# Messenger: API orqali, xabar jo\'natish va o\'qish', type: 'C#' },
     { id: 'R878uzXCEkA', title: 'C# HTML Email: API orqali, emailga HTMl content jo\'natish', type: 'C#' },
     { id: '_YkN9XiL0iY', title: 'C# Email: Account sozlash va google orqali email jo\'natish', type: 'C#' },
