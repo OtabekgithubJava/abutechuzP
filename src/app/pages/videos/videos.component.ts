@@ -9,6 +9,7 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'dd1ColgAS48', title: 'C++ Function: VOID funksiyasi va funksiya parameteri', type: 'C++' }, 
     { id: '5PK2e485hlI', title: 'Angular Intro: Angularga kirish va project yaratish', type: 'A' },
     { id: '5PK2e485hlI', title: 'Angular Intro: Angularga kirish va project yaratish', type: 'A' },
     { id: 'l3_w6c-0VSU', title: 'C++ Array: Array va 1-oy mavzulari bo\'yicha takrorlash', type: 'C++' },  
