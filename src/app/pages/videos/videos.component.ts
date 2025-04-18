@@ -9,6 +9,8 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'J9d5kxeMD3g', title: 'LMultiPage: Router, App-Router, Componentlar, va Flowbite', type: 'A' },
+    { id: 'InS_Y1ADbgg', title: 'Angular Components: Websayt qisimlarni componentlarga bo\'lish', type: 'A' },
     { id: 'oS9cVuP7OQM', title: 'C++ Return: Return va Void farqi va har xil misolllar', type: 'C++' }, 
     { id: 'ShGeVl9SM6A', title: 'Landing Page Scroll: Web saytni ID orqali qismlarga bo\'lish', type: 'A' },
     { id: 'dd1ColgAS48', title: 'C++ Function: VOID funksiyasi va funksiya parameteri', type: 'C++' }, 
