@@ -9,6 +9,7 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: '90A61d5i4iQ', title: 'C++ List: CRUD va front, back, push, pop, remove, empty', type: 'C++' }, 
     { id: 'J9d5kxeMD3g', title: 'LMultiPage: Router, App-Router, Componentlar, va Flowbite', type: 'A' },
     { id: 'InS_Y1ADbgg', title: 'Angular Components: Websayt qisimlarni componentlarga bo\'lish', type: 'A' },
     { id: 'oS9cVuP7OQM', title: 'C++ Return: Return va Void farqi va har xil misolllar', type: 'C++' }, 
