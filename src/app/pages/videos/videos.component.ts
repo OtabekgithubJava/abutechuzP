@@ -9,6 +9,7 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'KKfj_PBtLnI', title: 'Ustagram Finish, App-Router, Componentlar, va Flowbite', type: 'A' },
     { id: 'sTKD1QOe4_8', title: 'C++ Stack & Queue: LIFO va FIFO algoritm va misollari', type: 'C++' }, 
     { id: '90A61d5i4iQ', title: 'C++ List: CRUD va front, back, push, pop, remove, empty', type: 'C++' }, 
     { id: 'J9d5kxeMD3g', title: 'LMultiPage: Router, App-Router, Componentlar, va Flowbite', type: 'A' },
