@@ -9,6 +9,7 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'rNz92ca_xqA', title: 'C++ Chizmalar (NestedFor): Uchburchak, Tortburchak, Piramida', type: 'C++' }, 
     { id: '9KLgpiMyfjQ', title: 'TypeScript Loop: While, For, If, else, else if va haqiqiy TS', type: 'A' },
     { id: 'uKKB3cCBzAs', title: 'TypeScript: Compile, Let, DataTypes, Array & CRUD, Loops', type: 'A' },
     { id: 'KKfj_PBtLnI', title: 'Ustagram Finish, App-Router, Componentlar, va Flowbite', type: 'A' },
