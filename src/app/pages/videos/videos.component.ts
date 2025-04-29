@@ -12,6 +12,8 @@ export class VideosComponent implements OnInit {
     { id: '9KLgpiMyfjQ', title: 'TypeScript Loop: While, For, If, else, else if va haqiqiy TS', type: 'A' },
     { id: 'uKKB3cCBzAs', title: 'TypeScript: Compile, Let, DataTypes, Array & CRUD, Loops', type: 'A' },
     { id: 'KKfj_PBtLnI', title: 'Ustagram Finish, App-Router, Componentlar, va Flowbite', type: 'A' },
+    { id: 'zZn0vIZ5oZg', title: 'Ustagram UI, App-Router, Componentlar, va Flowbite', type: 'A' },
+    { id: 'EKicBaGVJ8w', title: 'Ustagram Start, App-Router, Componentlar, va Flowbite', type: 'A' },
     { id: 'sTKD1QOe4_8', title: 'C++ Stack & Queue: LIFO va FIFO algoritm va misollari', type: 'C++' }, 
     { id: '90A61d5i4iQ', title: 'C++ List: CRUD va front, back, push, pop, remove, empty', type: 'C++' }, 
     { id: 'J9d5kxeMD3g', title: 'LMultiPage: Router, App-Router, Componentlar, va Flowbite', type: 'A' },
