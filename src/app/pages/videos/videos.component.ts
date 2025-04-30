@@ -9,6 +9,7 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'wj_hR5_xNXU', title: 'Angular NGModule: Html contentiga qiymatni TypeScript orqali olis', type: 'A' },
     { id: 'rNz92ca_xqA', title: 'C++ Chizmalar (NestedFor): Uchburchak, Tortburchak, Piramida', type: 'C++' }, 
     { id: '9KLgpiMyfjQ', title: 'TypeScript Loop: While, For, If, else, else if va haqiqiy TS', type: 'A' },
     { id: 'uKKB3cCBzAs', title: 'TypeScript: Compile, Let, DataTypes, Array & CRUD, Loops', type: 'A' },
