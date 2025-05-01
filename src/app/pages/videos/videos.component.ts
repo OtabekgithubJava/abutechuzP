@@ -9,6 +9,8 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'oLAe3CcyH-8', title: 'C++ Map: Map dagi full CRUD va kichik/chala loyiha', type: 'C++' }, 
+    { id: 'eq9PIGdaXys', title: 'C++ Chizmalar (2-qism): Uchburchak, Tortburchak, Piramida', type: 'C++' }, 
     { id: 'wj_hR5_xNXU', title: 'Angular NGModule: Html contentiga qiymatni TypeScript orqali olis', type: 'A' },
     { id: 'rNz92ca_xqA', title: 'C++ Chizmalar (NestedFor): Uchburchak, Tortburchak, Piramida', type: 'C++' }, 
     { id: '9KLgpiMyfjQ', title: 'TypeScript Loop: While, For, If, else, else if va haqiqiy TS', type: 'A' },
