@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class ExamplesCaruselComponent {
   activeIndex = 0;
   images = [
-    { src: 'images/picture1.png', alt: 'Image 1' },
-    { src: 'images/picture2.png', alt: 'Image 2' },
-    { src: 'images/picture3.png', alt: 'Image 3' }
+    { src: 'images/students.jpg', alt: 'Image 1' },
+    { src: 'images/image1.jpeg', alt: 'Image 2' },
+    { src: 'images/image2.jpeg', alt: 'Image 3' }
   ];
 
   nextImage() {
