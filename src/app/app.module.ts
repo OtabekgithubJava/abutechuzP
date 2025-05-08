@@ -49,6 +49,7 @@ import { ParentsComponent } from './pages/admin/parents/parents.component';
 import { ParentFormComponent } from './pages/admin/parents/parent-form/parent-form.component';
 import { VideosComponent } from './pages/videos/videos.component';
 import { CoursesComponent } from './pages/admin/courses/courses.component';
+import { MockUpsComponent } from './pages/mock-ups/mock-ups.component';
 
 
 @NgModule({
@@ -86,7 +87,8 @@ import { CoursesComponent } from './pages/admin/courses/courses.component';
     ParentsComponent,
     ParentFormComponent,
     CoursesComponent,
-    VideosComponent
+    VideosComponent,
+    MockUpsComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'CCNx-DQKjTA', title: 'C++ OOP: Attribute, Method, Class, Student class misol', type: 'C++' }, 
     { id: 'u740UC-gAcw', title: 'MAANGy Backend: Post Table, Take, OrderByDecending, Where', type: 'A' },
     { id: 'oLAe3CcyH-8', title: 'C++ Map: Map dagi full CRUD va kichik/chala loyiha', type: 'C++' }, 
     { id: 'eq9PIGdaXys', title: 'C++ Chizmalar (2-qism): Uchburchak, Tortburchak, Piramida', type: 'C++' }, 
