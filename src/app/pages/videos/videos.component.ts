@@ -9,6 +9,8 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'Zo62-2Yaf6U', title: 'C++ OOP: Inheritance, Method, User & Admin misol', type: 'C++' }, 
+    { id: 'FK-L6-6BpGI', title: 'C++ OOP (takrorlash): Attribute, Method, Class, Qush', type: 'C++' }, 
     { id: 'CCNx-DQKjTA', title: 'C++ OOP: Attribute, Method, Class, Student class misol', type: 'C++' }, 
     { id: 'u740UC-gAcw', title: 'MAANGy Backend: Post Table, Take, OrderByDecending, Where', type: 'A' },
     { id: 'oLAe3CcyH-8', title: 'C++ Map: Map dagi full CRUD va kichik/chala loyiha', type: 'C++' }, 
