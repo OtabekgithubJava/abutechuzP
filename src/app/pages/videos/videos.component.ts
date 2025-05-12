@@ -9,6 +9,7 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: '4PEjbGsPNHQ', title: 'Integration: Frontend UI va Backend API ulash (Angularda)', type: 'A' },
     { id: 'Zo62-2Yaf6U', title: 'C++ OOP: Inheritance, Method, User & Admin misol', type: 'C++' }, 
     { id: 'FK-L6-6BpGI', title: 'C++ OOP (takrorlash): Attribute, Method, Class, Qush', type: 'C++' }, 
     { id: 'CCNx-DQKjTA', title: 'C++ OOP: Attribute, Method, Class, Student class misol', type: 'C++' }, 
