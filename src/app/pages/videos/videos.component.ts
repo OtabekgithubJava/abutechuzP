@@ -9,6 +9,8 @@ import { title } from 'node:process';
 })
 export class VideosComponent implements OnInit {
   videos = [
+    { id: 'iY0J955NEaE', title: 'Full-stack (2-qism): Frontend UI va Backend API ulash', type: 'A' },
+    { id: 'oKhSV0iw9Hw', title: 'Full-stack: Frontend UI va Backend API ulash (Backend)', type: 'A' },
     { id: 'vvGuEqQCgCE', title: 'OOP - Inheritance: Vehicle mavzusida inheritance misol', type: 'C++' }, 
     { id: 'dFI1vvwFtzc', title: 'Integration: Frontend UI va Backend API ulash (FULL)', type: 'A' },
     { id: 'jOPO0foMwAs', title: 'Github: Account, repository & terminal commandalari', type: 'C++' }, 
