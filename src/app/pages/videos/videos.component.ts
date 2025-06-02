@@ -12,6 +12,7 @@ export class VideosComponent implements OnInit {
     { id: '9kt7CENqfBY', title: 'Full-Stack: Errorisiz Authorization & Authentification', type: 'A' },
     { id: 'BN6tVG75zEY', title: 'Angular: Angularga kirish -> HTML, SCSS, va Youtube video', type: 'C++'},
     { id: 'nerKaYaxDqw', title: 'MatSnackBar & AuthGuard: Guard orqali component qulflash', type: 'A' },
+    { id: 'nerKaYaxDqw', title: 'MatSnackBar & AuthGuard: Guard orqali component qulflash', type: 'A' },
     { id: 'MbzRSNKZVwI', title: 'C++ Random: Random kutubxonasi va o\'yin misollar', type: 'C++' }, 
     { id: 'iY0J955NEaE', title: 'Full-stack (2-qism): Frontend UI va Backend API ulash', type: 'A' },
     { id: 'oKhSV0iw9Hw', title: 'Full-stack: Frontend UI va Backend API ulash (Backend)', type: 'A' },
